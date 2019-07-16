@@ -1,0 +1,39 @@
+XH3
+H B areas 4 global symbols
+M uart
+O -mstm8
+S .__.ABS. Def000000
+A _CODE size 0 flags 0 addr 0
+A DATA size 0 flags 0 addr 0
+A INITIALIZED size 0 flags 0 addr 0
+A DABS size 0 flags 8 addr 0
+A HOME size 0 flags 0 addr 0
+A GSINIT size 0 flags 0 addr 0
+A GSFINAL size 0 flags 0 addr 0
+A CONST size 0 flags 0 addr 0
+A INITIALIZER size 0 flags 0 addr 0
+A CODE size 27 flags 0 addr 0
+S _uart_read Def00001C
+S _uart_write Def00000E
+S _uart_init Def000000
+A CABS size 0 flags 8 addr 0
+T 00 00 00
+R 00 00 00 09
+T 00 00 00 35 01 52 33 A6 01 C7 52 32 35 0C 52 35
+R 00 00 00 09
+T 00 00 0D 81
+R 00 00 00 09
+T 00 00 0E
+R 00 00 00 09
+T 00 00 0E AE 52 31 7B 03 F7
+R 00 00 00 09
+T 00 00 14
+R 00 00 00 09
+T 00 00 14 C6 52 30 A5 40 27 F9 81
+R 00 00 00 09
+T 00 00 1C
+R 00 00 00 09
+T 00 00 1C
+R 00 00 00 09
+T 00 00 1C C6 52 30 A5 20 27 F9 C6 52 31 81
+R 00 00 00 09
