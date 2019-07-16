@@ -1,5 +1,5 @@
-# stm8-bootloader
-Serial bootloader for STM8S and STM8L microcontrollers. A detailed write-up on this bootloader is posted [here](https://lujji.github.io/blog/serial-bootloader-for-stm8).
+# bootloader
+Serial bootloader for STM8S and STM8L microcontrollers.
 
 ## Features
 
@@ -37,11 +37,3 @@ Enable write-protection (UBC) on pages 0-9 _(TODO: must be adjusted for STML)_:
 $ make opt-set
 ```
 
-## Uploading the firmware
-
-There is a demo application inside `app` directory which toggles PD4 via interrupts. To upload the application short PD3 to ground, power-cycle the MCU and run the uploader utility. DTR pin on UART-USB converter can be connected to RESET pin on STM8 for automatic reset.
-
-``` bash
-$ cd app && make
-$ python ../uploader/boot.py -p /dev/ttyUSB0 firmware.bin
-```
