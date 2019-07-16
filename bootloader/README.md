@@ -1,5 +1,6 @@
-# bootloader
-Serial bootloader for STM8S and STM8L microcontrollers.
+# [bootloader](https://github.com/sochub/STM8S003)
+
+Serial bootloader for STM8S003 microcontrollers.
 
 ## Features
 
