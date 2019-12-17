@@ -1,0 +1,159 @@
+/**
+  ******************************************************************************
+  * @file    ADC.c
+  * @author  
+  * @version V2.1.0
+  * @date    
+  * @brief   This file contains UART application funcation.
+  ******************************************************************************
+  */
+/* Includes ------------------------------------------------------------------*/
+#include "stm8s_clk.h" 
+#include "stm8s_adc1.h"
+#include "stm8s_gpio.h"
+#include "adc.h"
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+#define ADC_SAMPLE_NUM          12
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+uint16_t AdcBuffer[ ADC_SAMPLE_NUM ];
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+/* Public functions ----------------------------------------------------------*/
+
+/**
+  * @brief  Configure the ADC.
+  * @param
+  * @retval
+  */
+void ADC_Config(void)
+{
+#ifdef STM8S003K3
+    GPIO_Init( GPIOB,GPIO_PIN_2, GPIO_MODE_IN_FL_NO_IT );
+    GPIO_Init( GPIOB,GPIO_PIN_3, GPIO_MODE_IN_FL_NO_IT );
+    CLK_PeripheralClockConfig( CLK_PERIPHERAL_ADC, ENABLE );
+#else
+    GPIO_Init( GPIOD,GPIO_PIN_2, GPIO_MODE_IN_FL_NO_IT );
+    GPIO_Init( GPIOD,GPIO_PIN_3, GPIO_MODE_IN_FL_NO_IT );
+    CLK_PeripheralClockConfig( CLK_PERIPHERAL_ADC, ENABLE );
+    
+#endif
+    ADC1_PrescalerConfig( ADC1_PRESSEL_FCPU_D18 );
+    ADC1_ITConfig(ADC1_IT_EOCIE, DISABLE );
+    
+    ADC1_Cmd(ENABLE);
+
+}
+
+/**
+  * @brief  Start the ADC conversion.
+  * @param
+  * @retval
+  */
+void ADC_Start(void)
+{
+    ADC1_StartConversion();
+}
+/**
+  * @brief  Get the ADC conversion value.
+  * @param none.
+  * @retval ADC_Value
+  */
+u16 ADC_GetValue(void)
+{
+   u16 adcvalue;
+   
+   ADC1_StartConversion();
+   while( ADC1_GetFlagStatus( ADC1_FLAG_EOC )== RESET );
+   adcvalue = ADC1_GetConversionValue();
+   ADC1_ClearFlag(ADC1_FLAG_EOC);
+   return adcvalue;
+}
+/**
+  * @brief Check ADC conversion complete.
+  * @param none.
+  * @retval 
+  */
+u8 ADC_CompleteCheck(void)
+{
+    u8 adcflag;
+    adcflag = ADC1_GetFlagStatus(ADC1_FLAG_EOC);
+    
+    return adcflag;
+}
+
+/**
+  * @brief Clear ADC conversion complete flag.
+  * @param none.
+  * @retval 
+  */
+void ADC_CompleteClear(void)
+{
+    ADC1_ClearFlag(ADC1_FLAG_EOC);
+}
+/**
+  * @brief none.
+  * @param none.
+  * @retval 
+  */
+void bubble_array ( uint16_t * array, uint8_t num )
+{
+    uint16_t arraytemp; 
+    register int i = 0,j = 0;
+    
+    for( i = 0; i < num -1;i ++)
+    {
+       for( j = 0; j< num - 1 - i; j ++)
+        {
+           if( array[j + 1] < array[j])
+            {
+                    arraytemp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = arraytemp;
+            }         
+       }
+    }
+}
+/**
+  * @brief none.
+  * @param none.
+  * @retval 
+  */
+uint16_t GetAdcValue( void )
+{
+  uint8_t i;
+  uint16_t Value[ ADC_SAMPLE_NUM ];
+  uint32_t sum = 0;
+  
+  for( i = 0; i < ADC_SAMPLE_NUM ; i ++ )
+  {
+      Value[i] = ADC_GetValue();
+  }
+  
+  bubble_array ( Value, ADC_SAMPLE_NUM );
+  
+  for( i = 1; i < ( ADC_SAMPLE_NUM - 1 ) ; i ++ )
+  {
+      sum += Value[ i ];
+  }
+  return (uint16_t )( sum /(ADC_SAMPLE_NUM - 2));
+}
+/**
+  * @brief none.
+  * @param none.
+  * @retval 
+  */
+void AdcHdl( void )
+{
+  static uint8_t i = 0;
+  
+  AdcBuffer[i] = ADC1_GetConversionValue();
+  if( ( ++i ) >= ADC_SAMPLE_NUM )
+  {
+      i = 0;
+  }
+  
+  ADC1_ClearITPendingBit( ADC1_IT_EOC );
+}

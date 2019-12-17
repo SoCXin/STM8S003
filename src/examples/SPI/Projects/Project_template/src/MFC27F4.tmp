@@ -1,0 +1,322 @@
+/* Includes ------------------------------------------------------------------*/
+#include "stm8s.h"
+#include "stm8s_clk.h"
+#include "uart.h"
+#include "tm1650.h"
+#include "adc.h"
+#include "stdio.h"
+
+#define         OVERVOLTAGE_VALUE       535
+
+uint16_t TimerCount;
+uint8_t TimerFlag;
+
+uint16_t voltage;
+float voltage0 , voltage1;
+
+uint16_t temp0 = 0;
+uint16_t temp1 = 0;
+
+uint16_t f_temp;
+
+struct 
+{
+  uint8_t SetTime : 4;
+  uint8_t Set : 1;
+  uint8_t Dis : 1;
+  uint8_t Point : 1;
+  uint8_t Rev : 1;
+  uint8_t SetValue : 8;
+  uint8_t Count : 8;
+}Display = { 0 , 0 , 0 , 0 , 0 , 0 , 0 };
+
+uint8_t LedState = 0;
+
+uchar CODE[10] = {0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f}; //0~9显示代码
+uchar CODE_[10] = {0xBf,0x86,0xDb,0xCf,0xE6,0xEd,0xFd,0x87,0xFf,0xEf}; //0~9显示代码
+
+int putchar (int c);
+
+void delay(unsigned int x)
+{
+  unsigned int i=0,j=0;
+  
+  for(i=0;i<x;i++)
+  {
+    for(j=0;j<499;j++)
+    {
+      
+    }
+  }
+}
+
+void CLK_Config(void)
+{
+    CLK_DeInit();
+    CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV2);
+}
+
+void Uart_Init(void)
+{
+  UART1_DeInit();
+  UART1_Init((uint32_t)115200,UART1_WORDLENGTH_8D,UART1_STOPBITS_1,
+  UART1_PARITY_NO,UART1_SYNCMODE_CLOCK_DISABLE,UART1_MODE_TXRX_ENABLE);
+  UART1_Cmd(ENABLE);
+}
+void TimerInit( void )
+{
+    CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER2, ENABLE);
+    TIM2_TimeBaseInit( TIM2_PRESCALER_128 , 31250 );                     // 500ms.
+    TIM2_ITConfig( TIM2_IT_UPDATE , ENABLE );
+    TIM2_ARRPreloadConfig( ENABLE );
+    TIM2_SetCounter( 0 );
+    TIM2_Cmd( ENABLE );
+    TIM2_ClearITPendingBit( TIM2_IT_UPDATE );
+}
+/*发送哟个字节，查询发送。当发送寄存器为空即发送*/
+void UART1_SendByte(uint8_t data)
+{
+  UART1_SendData8(data);
+  /* Loop until the end of transmission */
+  while(UART1_GetFlagStatus(UART1_FLAG_TC)==RESET);
+}
+
+int main(void)
+{
+  uint8_t s0,s1,s2;
+    
+  CLK_Config( );
+//  UART_Config( );
+    
+  GPIO_Init( GPIOA, GPIO_PIN_2, GPIO_MODE_OUT_PP_LOW_SLOW );
+  GPIO_Init( GPIOA, GPIO_PIN_3, GPIO_MODE_OUT_PP_LOW_SLOW );
+  
+  delay( 1000 );
+    
+  ADC_Config( );
+  
+   voltage = GetAdcValue( 1 );
+  
+  if( voltage >= OVERVOLTAGE_VALUE )
+  {
+      ;                         // 设置定时器.
+  }
+  else
+  {
+  
+    for( ;; )
+    {
+        voltage = GetAdcValue( 1 );
+        
+        if( voltage < OVERVOLTAGE_VALUE )
+        {
+            break;
+        }
+    }
+  }
+  
+  I2CInit();
+  TM1650_Set(0x48,0x51);//初始化为5级灰度，开显示
+
+  TM1650_Set(0x6E, 0x40 );
+  TM1650_Set(0x6C, 0x40 );
+  TM1650_Set(0x6A, 0x40 );
+  
+  voltage = GetAdcValue( 0 );
+  
+  temp0 = voltage / 4;
+  
+  delay( 100 );
+  
+  TimerInit( );
+  enableInterrupts();
+  while(1)
+  {
+      voltage = GetAdcValue( 0 );
+      
+      temp1 = voltage / 4;
+      
+      f_temp = (( voltage * 10 ) / 4 ) % 10 ;
+      
+      if( ( ( f_temp >= 4 ) &&  ( f_temp <= 6 ) ) || ( ( temp1 == 0 ) && (f_temp <= 6)))
+      {
+        if(  temp1 != temp0 )
+        {
+          temp0 = temp1;
+          Display.Count = temp0;
+          Display.Dis = 1;
+          Display.Point = 0;
+          if( Display.Count == 0 )
+          {
+            Display.SetTime = 0;
+            if( LedState == 1 )
+            {
+                 LedState = 0;
+                 GPIO_WriteLow( GPIOA, GPIO_PIN_2 );
+                 GPIO_WriteLow( GPIOA, GPIO_PIN_3 );             
+            }
+          }
+          else
+          {
+             Display.SetTime = 10;
+          }
+        }
+      }
+
+      if( Display.Dis == 1 )
+      {
+          Display.Dis = 0;
+          
+          s0 = Display.Count / 100;
+          s1 = (Display.Count %100) / 10;
+          s2 = (Display.Count %100) % 10;
+          
+#ifdef STM8S003K3
+          
+          if( Display.Point == 0)
+          {
+             TM1650_Set(0x6E,CODE[s2]);
+          }
+          else
+          {
+            TM1650_Set(0x6E,CODE_[s2]);
+          }
+          TM1650_Set(0x6C,CODE[s1]);
+          TM1650_Set(0x6A,CODE[s0]);
+#else
+          if( Display.Point == 0 )
+          {
+             TM1650_Set(0x6A,CODE[s2]);
+          }
+          else
+          {
+             TM1650_Set(0x6A,CODE_[s2]);
+          }
+          
+          TM1650_Set(0x6C,CODE[s1]);
+          TM1650_Set(0x6E,CODE[s0]);
+#endif
+           
+      }
+      
+  }
+  
+}
+
+void Timer2IntHdl( void )
+{
+   static uint8_t IntCount = 120;
+   
+   if( Display.SetTime != 0 )
+   {
+      if( ( -- Display.SetTime ) == 0 )
+      {
+          Display.Set = 1;
+          IntCount = 120;
+          Display.Point = 0;
+          
+          if( LedState == 0 )
+          {
+              LedState = 1;
+              GPIO_WriteHigh( GPIOA, GPIO_PIN_2 );
+              GPIO_WriteHigh( GPIOA, GPIO_PIN_3 );
+          }
+      }
+      else
+      {
+          Display.Set = 0;
+      }
+   }
+   
+   if( Display.Set == 1 )
+   {
+       if( IntCount != 0 )
+       {
+          if( ( -- IntCount ) ==  0 )
+          {
+              IntCount = 120;
+              
+              if( Display.Count != 0 )
+              {
+                  Display.Count --;
+                  
+                  if( Display.Count == 0 )
+                  {
+                      IntCount = 0;
+                      Display.Point = 1;
+                      if( LedState == 1 )
+                      {
+                         LedState = 0;
+                         GPIO_WriteLow( GPIOA, GPIO_PIN_2 );
+                         GPIO_WriteLow( GPIOA, GPIO_PIN_3 );
+                      }
+                  }
+                  
+              }
+          }
+          
+          Display.Point ^= 0x01;
+          Display.Dis = 1;
+       }
+       
+   }
+   
+   TIM2_ClearITPendingBit( TIM2_IT_UPDATE );
+}
+/**
+  * @brief Retargets the C library printf function to the UART1.
+  * @param[in] c Character to send
+  * @retval char Character sent
+  * @par Required preconditions:
+  * - None
+  * @par Library functions called:
+  * - UART1_GetFlagStatus()
+	* - UART1_SendData8()
+  */
+
+int putchar (int c)
+{
+
+    if (c == '\n')
+    {
+        /* put '\r' to hardware here */
+        /* Wait transmission is completed : otherwise the first data is not sent */
+        while (!UART1_GetFlagStatus(UART1_FLAG_TC));
+        UART1_SendData8('\r');
+        /* Wait transmission is completed */
+        while (!UART1_GetFlagStatus(UART1_FLAG_TC));
+    }
+
+    /* put c to hardware here */
+    /* Wait transmission is completed : otherwise the first data is not sent */
+    while (!UART1_GetFlagStatus(UART1_FLAG_TC));
+    UART1_SendData8(c);
+    /* Wait transmission is completed */
+    while (!UART1_GetFlagStatus(UART1_FLAG_TC));
+
+
+    return (c);
+}
+
+#ifdef USE_FULL_ASSERT
+
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *   where the assert_param error has occurred.
+  * @param file: pointer to the source file name
+  * @param line: assert_param error line source number
+  * @retval : None
+  */
+void assert_failed(u8* file, u32 line)
+{ 
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+
+  /* Infinite loop */
+  while (1)
+  {
+  }
+}
+#endif
+
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
