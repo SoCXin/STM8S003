@@ -192,7 +192,7 @@ INTERRUPT_HANDLER(EXTI_PORTE_IRQHandler, 7)
  }
 #endif /* (STM8S903) || (STM8AF622x) */
 
-#if defined (STM8S003) || defined (STM8AF52Ax)
+#if defined (STM8S208) || defined (STM8AF52Ax)
 /**
   * @brief CAN RX Interrupt routine.
   * @param  None
@@ -216,7 +216,7 @@ INTERRUPT_HANDLER(EXTI_PORTE_IRQHandler, 7)
      it is recommended to set a breakpoint on the following instruction.
   */
  }
-#endif /* (STM8S003) || (STM8AF52Ax) */
+#endif /* (STM8S208) || (STM8AF52Ax) */
 
 /**
   * @brief SPI Interrupt routine.
@@ -304,7 +304,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   */
  }
 
-#else /* (STM8S003) || (STM8S207) || (STM8S105) || (STM8S103) || (STM8AF62Ax) || (STM8AF52Ax) || (STM8AF626x) */
+#else /* (STM8S208) || (STM8S207) || (STM8S105) || (STM8S103) || (STM8AF62Ax) || (STM8AF52Ax) || (STM8AF626x) */
 /**
   * @brief Timer2 Update/Overflow/Break Interrupt routine.
   * @param  None
@@ -330,7 +330,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
  }
 #endif /* (STM8S903) || (STM8AF622x) */
 
-#if defined (STM8S003) || defined(STM8S207) || defined(STM8S007) || defined(STM8S105) || \
+#if defined (STM8S208) || defined(STM8S207) || defined(STM8S007) || defined(STM8S105) || \
     defined(STM8S005) ||  defined (STM8AF62Ax) || defined (STM8AF52Ax) || defined (STM8AF626x)
 /**
   * @brief Timer3 Update/Overflow/Break Interrupt routine.
@@ -355,9 +355,9 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
      it is recommended to set a breakpoint on the following instruction.
   */
  }
-#endif /* (STM8S003) || (STM8S207) || (STM8S105) || (STM8AF62Ax) || (STM8AF52Ax) || (STM8AF626x) */
+#endif /* (STM8S208) || (STM8S207) || (STM8S105) || (STM8AF62Ax) || (STM8AF52Ax) || (STM8AF626x) */
 
-#if defined (STM8S003) || defined(STM8S207) || defined(STM8S007) || defined(STM8S103) || \
+#if defined (STM8S208) || defined(STM8S207) || defined(STM8S007) || defined(STM8S103) || \
     defined(STM8S003) ||  defined (STM8AF62Ax) || defined (STM8AF52Ax) || defined (STM8S903)
 /**
   * @brief UART1 TX Interrupt routine.
@@ -400,7 +400,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
    //UART1_ClearITPendingBit(123);
    //UART1_ClearFlag(UART1_FLAG_RXNE);
  }
-#endif /* (STM8S003) || (STM8S207) || (STM8S103) || (STM8S903) || (STM8AF62Ax) || (STM8AF52Ax) */
+#endif /* (STM8S208) || (STM8S207) || (STM8S103) || (STM8S903) || (STM8AF62Ax) || (STM8AF52Ax) */
 
 #if defined(STM8AF622x)
 /**
@@ -466,7 +466,7 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 19)
  }
 #endif /* (STM8S105) || (STM8AF626x) */
 
-#if defined(STM8S207) || defined(STM8S007) || defined(STM8S003) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
+#if defined(STM8S207) || defined(STM8S007) || defined(STM8S208) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
 /**
   * @brief UART3 TX interrupt routine.
   * @param  None
@@ -490,9 +490,9 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 19)
        it is recommended to set a breakpoint on the following instruction.
     */
  }
-#endif /* (STM8S003) || (STM8S207) || (STM8AF52Ax) || (STM8AF62Ax) */
+#endif /* (STM8S208) || (STM8S207) || (STM8AF52Ax) || (STM8AF62Ax) */
 
-#if defined(STM8S207) || defined(STM8S007) || defined(STM8S003) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
+#if defined(STM8S207) || defined(STM8S007) || defined(STM8S208) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
 /**
   * @brief ADC2 interrupt routine.
   * @param  None
@@ -518,7 +518,7 @@ INTERRUPT_HANDLER(I2C_IRQHandler, 19)
        it is recommended to set a breakpoint on the following instruction.
     */
  }
-#endif /* (STM8S003) || (STM8S207) || (STM8AF52Ax) || (STM8AF62Ax) */
+#endif /* (STM8S208) || (STM8S207) || (STM8AF52Ax) || (STM8AF62Ax) */
 
 #if defined (STM8S903) || defined (STM8AF622x)
 /**
@@ -532,7 +532,7 @@ INTERRUPT_HANDLER(TIM6_UPD_OVF_TRG_IRQHandler, 23)
      it is recommended to set a breakpoint on the following instruction.
   */
  }
-#else /* STM8S003 or STM8S207 or STM8S105 or STM8S103 or STM8AF52Ax or STM8AF62Ax or STM8AF626x */
+#else /* STM8S208 or STM8S207 or STM8S105 or STM8S103 or STM8AF52Ax or STM8AF62Ax or STM8AF626x */
 /**
   * @brief Timer4 Update/Overflow Interrupt routine.
   * @param  None

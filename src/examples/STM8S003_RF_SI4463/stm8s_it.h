@@ -56,10 +56,10 @@
  INTERRUPT void EXTI_PORTF_IRQHandler(void); /* EXTI PORTF */
 #endif /* (STM8S903) || (STM8AF622x) */
 
-#if defined (STM8S003) || defined (STM8AF52Ax)
+#if defined (STM8S208) || defined (STM8AF52Ax)
  INTERRUPT void CAN_RX_IRQHandler(void); /* CAN RX */
  INTERRUPT void CAN_TX_IRQHandler(void); /* CAN TX/ER/SC */
-#endif /* (STM8S003) || (STM8AF52Ax) */
+#endif /* (STM8S208) || (STM8AF52Ax) */
 
  INTERRUPT void SPI_IRQHandler(void); /* SPI */
  INTERRUPT void TIM1_CAP_COM_IRQHandler(void); /* TIM1 CAP/COM */
@@ -68,22 +68,22 @@
 #if defined(STM8S903) || defined(STM8AF622x)
  INTERRUPT void TIM5_UPD_OVF_BRK_TRG_IRQHandler(void); /* TIM5 UPD/OVF/BRK/TRG */
  INTERRUPT void TIM5_CAP_COM_IRQHandler(void); /* TIM5 CAP/COM */
-#else /* (STM8S003) || (STM8S207) || (STM8S105) || (STM8S103) || (STM8AF52Ax) || (STM8AF62Ax) || (STM8A626x) */
+#else /* (STM8S208) || (STM8S207) || (STM8S105) || (STM8S103) || (STM8AF52Ax) || (STM8AF62Ax) || (STM8A626x) */
  INTERRUPT void TIM2_UPD_OVF_BRK_IRQHandler(void); /* TIM2 UPD/OVF/BRK */
  INTERRUPT void TIM2_CAP_COM_IRQHandler(void); /* TIM2 CAP/COM */
 #endif /* (STM8S903) || (STM8AF622x) */
 
-#if defined (STM8S003) || defined(STM8S207) || defined(STM8S007) || defined(STM8S105) || \
+#if defined (STM8S208) || defined(STM8S207) || defined(STM8S007) || defined(STM8S105) || \
     defined(STM8S005) ||  defined (STM8AF52Ax) || defined (STM8AF62Ax) || defined (STM8AF626x)
  INTERRUPT void TIM3_UPD_OVF_BRK_IRQHandler(void); /* TIM3 UPD/OVF/BRK */
  INTERRUPT void TIM3_CAP_COM_IRQHandler(void); /* TIM3 CAP/COM */
-#endif /* (STM8S003) || (STM8S207) || (STM8S105) || (STM8AF52Ax) || (STM8AF62Ax) || (STM8A626x) */
+#endif /* (STM8S208) || (STM8S207) || (STM8S105) || (STM8AF52Ax) || (STM8AF62Ax) || (STM8A626x) */
 
-#if defined (STM8S003) || defined(STM8S207) || defined(STM8S007) || defined(STM8S103) || \
+#if defined (STM8S208) || defined(STM8S207) || defined(STM8S007) || defined(STM8S103) || \
     defined(STM8S003) ||  defined (STM8AF52Ax) || defined (STM8AF62Ax) || defined (STM8S903)
  INTERRUPT void UART1_TX_IRQHandler(void); /* UART1 TX */
  INTERRUPT void UART1_RX_IRQHandler(void); /* UART1 RX */
-#endif /* (STM8S003) || (STM8S207) || (STM8S903) || (STM8S103) || (STM8AF52Ax) || (STM8AF62Ax) */
+#endif /* (STM8S208) || (STM8S207) || (STM8S903) || (STM8S103) || (STM8AF52Ax) || (STM8AF62Ax) */
 
 #if defined (STM8AF622x)
  INTERRUPT void UART4_TX_IRQHandler(void); /* UART4 TX */
@@ -97,20 +97,20 @@
  INTERRUPT void UART2_TX_IRQHandler(void); /* UART2 TX */
 #endif /* (STM8S105) || (STM8AF626x) */
 
-#if defined(STM8S207) || defined(STM8S007) || defined(STM8S003) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
+#if defined(STM8S207) || defined(STM8S007) || defined(STM8S208) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
  INTERRUPT void UART3_RX_IRQHandler(void); /* UART3 RX */
  INTERRUPT void UART3_TX_IRQHandler(void); /* UART3 TX */
-#endif /* (STM8S207) || (STM8S003) || (STM8AF62Ax) || (STM8AF52Ax) */
+#endif /* (STM8S207) || (STM8S208) || (STM8AF62Ax) || (STM8AF52Ax) */
 
-#if defined(STM8S207) || defined(STM8S007) || defined(STM8S003) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
+#if defined(STM8S207) || defined(STM8S007) || defined(STM8S208) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
  INTERRUPT void ADC2_IRQHandler(void); /* ADC2 */
 #else /* (STM8S105) || (STM8S103) || (STM8S903) || (STM8AF622x) */
  INTERRUPT void ADC1_IRQHandler(void); /* ADC1 */
-#endif /* (STM8S207) || (STM8S003) || (STM8AF62Ax) || (STM8AF52Ax) */
+#endif /* (STM8S207) || (STM8S208) || (STM8AF62Ax) || (STM8AF52Ax) */
 
 #if defined(STM8S903) || defined(STM8AF622x)
  INTERRUPT void TIM6_UPD_OVF_TRG_IRQHandler(void); /* TIM6 UPD/OVF/TRG */
-#else /* (STM8S003) || (STM8S207) || (STM8S105) || (STM8S103) || (STM8AF62Ax) || (STM8AF52Ax) || (STM8AF626x) */
+#else /* (STM8S208) || (STM8S207) || (STM8S105) || (STM8S103) || (STM8AF62Ax) || (STM8AF52Ax) || (STM8AF626x) */
  INTERRUPT void TIM4_UPD_OVF_IRQHandler(void); /* TIM4 UPD/OVF */
 #endif /* (STM8S903) || (STM8AF622x) */
  INTERRUPT void EEPROM_EEC_IRQHandler(void); /* EEPROM ECC CORRECTION */

@@ -37,15 +37,15 @@
     defined(STM8S903) || defined (STM8AF626x) || defined (STM8AF622x)
 #include "stm8s_adc1.h" 
 #endif /* (STM8S105) ||(STM8S103) || (STM8S903) || (STM8AF626x) || (STM8AF622x) */
-#if defined(STM8S003) || defined(STM8S207) || defined(STM8S007) || defined (STM8AF52Ax) ||\
+#if defined(STM8S208) || defined(STM8S207) || defined(STM8S007) || defined (STM8AF52Ax) ||\
     defined (STM8AF62Ax)
  #include "stm8s_adc2.h"
-#endif /* (STM8S003) || (STM8S207) || (STM8AF62Ax) || (STM8AF52Ax) */
+#endif /* (STM8S208) || (STM8S207) || (STM8AF62Ax) || (STM8AF52Ax) */
 #include "stm8s_awu.h"
 #include "stm8s_beep.h"
-#if defined (STM8S003) || defined (STM8AF52Ax)
+#if defined (STM8S208) || defined (STM8AF52Ax)
  #include "stm8s_can.h"
-#endif /* (STM8S003) || (STM8AF52Ax) */
+#endif /* (STM8S208) || (STM8AF52Ax) */
 #include "stm8s_clk.h"
 #include "stm8s_exti.h"
 #include "stm8s_flash.h"
@@ -59,10 +59,10 @@
 #if !defined(STM8S903) || !defined(STM8AF622x)
  #include "stm8s_tim2.h"
 #endif /* (STM8S903) || (STM8AF622x) */
-#if defined(STM8S003) || defined(STM8S207) || defined(STM8S007) ||defined(STM8S105) ||\
+#if defined(STM8S208) || defined(STM8S207) || defined(STM8S007) ||defined(STM8S105) ||\
     defined(STM8S005) ||  defined (STM8AF52Ax) || defined (STM8AF62Ax) || defined (STM8AF626x)
  #include "stm8s_tim3.h"
-#endif /* (STM8S003) ||defined(STM8S207) || defined(STM8S007) ||defined(STM8S105) */ 
+#endif /* (STM8S208) ||defined(STM8S207) || defined(STM8S007) ||defined(STM8S105) */ 
 #if !defined(STM8S903) || !defined(STM8AF622x)
  #include "stm8s_tim4.h"
 #endif /* (STM8S903) || (STM8AF622x) */
@@ -70,17 +70,17 @@
  #include "stm8s_tim5.h"
  #include "stm8s_tim6.h"
 #endif  /* (STM8S903) || (STM8AF622x) */
-#if defined(STM8S003) ||defined(STM8S207) || defined(STM8S007) ||defined(STM8S103) ||\
+#if defined(STM8S208) ||defined(STM8S207) || defined(STM8S007) ||defined(STM8S103) ||\
     defined(STM8S003) || defined(STM8S903) || defined (STM8AF52Ax) || defined (STM8AF62Ax)
  #include "stm8s_uart1.h"
-#endif /* (STM8S003) || (STM8S207) || (STM8S103) || (STM8S903) || (STM8AF52Ax) || (STM8AF62Ax) */
+#endif /* (STM8S208) || (STM8S207) || (STM8S103) || (STM8S903) || (STM8AF52Ax) || (STM8AF62Ax) */
 #if defined(STM8S105) || defined(STM8S005) ||  defined (STM8AF626x)
  #include "stm8s_uart2.h"
 #endif /* (STM8S105) || (STM8AF626x) */
-#if defined(STM8S003) ||defined(STM8S207) || defined(STM8S007) || defined (STM8AF52Ax) ||\
+#if defined(STM8S208) ||defined(STM8S207) || defined(STM8S007) || defined (STM8AF52Ax) ||\
     defined (STM8AF62Ax)
  #include "stm8s_uart3.h"
-#endif /* STM8S003 || STM8S207 || STM8AF52Ax || STM8AF62Ax */
+#endif /* STM8S208 || STM8S207 || STM8AF52Ax || STM8AF62Ax */
 #if defined(STM8AF622x)
  #include "stm8s_uart4.h"
 #endif /* (STM8AF622x) */      
