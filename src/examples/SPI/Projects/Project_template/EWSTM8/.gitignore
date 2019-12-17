@@ -1,8 +1,0 @@
-*.dep
-*.ewt
-*.log
-out/
-settings/
-*.pyc
-.pio/
-.vscode/
