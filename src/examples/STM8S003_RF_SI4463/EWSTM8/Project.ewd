@@ -2,7 +2,7 @@
 <project>
     <fileVersion>3</fileVersion>
     <configuration>
-        <name>STM8S208</name>
+        <name>STM8S003</name>
         <toolchain>
             <name>STM8</name>
         </toolchain>

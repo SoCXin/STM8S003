@@ -2,7 +2,7 @@
 <project>
     <fileVersion>3</fileVersion>
     <configuration>
-        <name>STM8S208</name>
+        <name>STM8S003</name>
         <toolchain>
             <name>STM8</name>
         </toolchain>
@@ -34,15 +34,15 @@
                 </option>
                 <option>
                     <name>ExePath</name>
-                    <state>STM8S208\Exe</state>
+                    <state>STM8S003\Exe</state>
                 </option>
                 <option>
                     <name>ObjPath</name>
-                    <state>STM8S208\Obj</state>
+                    <state>STM8S003\Obj</state>
                 </option>
                 <option>
                     <name>ListPath</name>
-                    <state>STM8S208\List</state>
+                    <state>STM8S003\List</state>
                 </option>
                 <option>
                     <name>GenRuntimeLibSelect</name>
