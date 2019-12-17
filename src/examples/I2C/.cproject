@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="iar.wtdx.stm8.toolchain.project.exe.configuration.debug.1358112061">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="iar.wtdx.stm8.toolchain.project.exe.configuration.debug.1358112061" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.iar.cdt.errorParser.com.iar.cdt.errorParser.ErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="out" artifactName="${ProjName}" buildArtefactType="com.iar.cdt.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.iar.cdt.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="iar.wtdx.stm8.toolchain.project.exe.configuration.debug.1358112061" name="Debug" parent="iar.wtdx.stm8.toolchain.project.exe.configuration.debug">
+					<folderInfo id="iar.wtdx.stm8.toolchain.project.exe.configuration.debug.1358112061." name="/" resourcePath="">
+						<toolChain id="iar.wtdx.stm8.toolchain.project.exe.configuration.debug.toolChain.2068422174" name="IAR Toolchain for STM8" superClass="iar.wtdx.stm8.toolchain.project.exe.configuration.debug.toolChain">
+							<option id="iar.wtdx.stm8.toolchain.option.OGenDevice::deviceSelect.1297062370" name="Device:" superClass="iar.wtdx.stm8.toolchain.option.OGenDevice::deviceSelect" value="UnspecifiedSTM8&#9;STM8 - Unspecified" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.General.wtdxToolVersion.923376582" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.General.wtdxToolVersion"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenCodeModel::list.433031343" name="Code model:" superClass="iar.wtdx.stm8.toolchain.option.OGenCodeModel::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenDataModel::list.1215626281" name="Data model:" superClass="iar.wtdx.stm8.toolchain.option.OGenDataModel::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenOutputBinary::alternatives.1986868247" name="Output file" superClass="iar.wtdx.stm8.toolchain.option.OGenOutputBinary::alternatives"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenStackSize::descriptor.41762457" name="Stack size (bytes):" superClass="iar.wtdx.stm8.toolchain.option.OGenStackSize::descriptor" value="0x100" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenHeapSize::descriptor.353677506" name="Heap size (bytes):" superClass="iar.wtdx.stm8.toolchain.option.OGenHeapSize::descriptor" value="0x100" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::description.1064175986" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::description" value="No specifier a or A, no specifier n, no float or long long." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::description.791088484" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::description" value="Default variants of cos, sin, tan, log, log10, pow, and exp." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::list.2051663817" name="Scanf formatter" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::description.285162309" name="Description:" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::description" value="Use the normal configuration of the C/EC++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::list.819619918" name="Printf formatter" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::list.1344729626" name="Math functions" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::description.5304479" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::description" value="No specifier a or A, no specifier n, no float or long long." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::list.1817356954" name="Library:" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.dGListPath.2112622119" name="List files:" superClass="iar.wtdx.stm8.toolchain.option.dGListPath"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::listSlave.1393332501" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::listSlave"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::configPath.605682486" name="Configuration file:" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::configPath" value="$TOOLKIT_DIR$\LIB\dlstm8smn.h" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dEnable.1418154761" name="Enable MISRA-C" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dEnable"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dMisraVer.907339285" name="" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dMisraVer"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules04.1188753141" name="Set Active MISRA-C:2004 Rules" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules04"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules98.96451687" name="Set Active MISRA-C:1998 Rules" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules98"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dVerbose.548753689" name="Log MISRA C-Settings" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dVerbose"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="iar.wtdx.stm8.toolchain.targetPlatform.ELF.1381674609" isAbstract="false" name="IAR STM8 Target platform (ELF)" osList="win32,linux" superClass="iar.wtdx.stm8.toolchain.targetPlatform.ELF"/>
+							<builder buildPath="${workspace_loc:/example project}/Debug" id="iar.wtdx.stm8.toolchain.builder.782061671" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT 内部构建器" superClass="iar.wtdx.stm8.toolchain.builder">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Release"/>
+								</outputEntries>
+							</builder>
+							<tool id="iar.wtdx.stm8.toolchain.compiler.327682481" name="IAR STM8 C/C++ Compiler" superClass="iar.wtdx.stm8.toolchain.compiler">
+								<option defaultValue="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadios.OIccOptimization::kLow" id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadios.1970438028" name="Level" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadios" valueType="enumerated"/>
+								<option defaultValue="OIccOptimization::kComSubElim,0,1;OIccOptimization::kLoopUnroll,0,1;OIccOptimization::kFuncInline,0,1;OIccOptimization::kCodeMotion,0,1;OIccOptimization::kTBAA,0,1;OIccOptimization::kCrossCall,0,1;" id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCList.1269891757" name="Enabled transformations:" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCList" value="OIccOptimization::kComSubElim,0,0;OIccOptimization::kLoopUnroll,0,0;OIccOptimization::kFuncInline,0,0;OIccOptimization::kCodeMotion,0,0;OIccOptimization::kTBAA,0,0;OIccOptimization::kCrossCall,0,0;" valueType="string"/>
+								<option defaultValue="true" id="iar.wtdx.stm8.toolchain.option.OIccDebugInfo::enable.1467235452" name="Generate debug information" superClass="iar.wtdx.stm8.toolchain.option.OIccDebugInfo::enable" valueType="boolean"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDefines::dEdit.1231484008" name="Defined symbols: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OCCDefines::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCodeModel::codemodel.1546903258" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccCodeModel::codemodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccDataModel::datamodel.1116896417" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccDataModel::datamodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccLibConfigHeader::header.368976941" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccLibConfigHeader::header"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules04.1129481537" name="Set Active MISRA-C:2004 Rules" superClass="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules04"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dOverride.1326412409" name="Override General MISRA-C Settings" superClass="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dOverride"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules98.843186752" name="Set Active MISRA-C:1998 Rules" superClass="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules98"/>
+								<option id="iar.wtdx.stm8.toolchain.option.ICCSTM8.wtdxToolVersion.1011737031" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.ICCSTM8.wtdxToolVersion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccLanguage::alternatives.811126783" name="Language" superClass="iar.wtdx.stm8.toolchain.option.OIccLanguage::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::alternatives.620112677" name="C dialect" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::inlineSemantics.1268882863" name="C++ inline semantics" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::inlineSemantics"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::VLA.415053209" name="Allow VLA" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::VLA"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::reqPrototypes.299544483" name="Require prototypes" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::reqPrototypes"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccLangConformance::alternatives.1662454466" name="Language conformance" superClass="iar.wtdx.stm8.toolchain.option.OIccLangConformance::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCppDialect::alternatives.538436496" name="C++ dialect" superClass="iar.wtdx.stm8.toolchain.option.OIccCppDialect::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCppDialect::staticDestr.1778601276" name="Destroy static objects" superClass="iar.wtdx.stm8.toolchain.option.OIccCppDialect::staticDestr"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccSignedChar::alternatives.1228771794" name="Plain 'char' is" superClass="iar.wtdx.stm8.toolchain.option.OIccSignedChar::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccFloatingPointSemantics::alternatives.297818884" name="Floating-point semantics" superClass="iar.wtdx.stm8.toolchain.option.OIccFloatingPointSemantics::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccMultibyteSupport::enable.343107791" name="Enable multibyte support" superClass="iar.wtdx.stm8.toolchain.option.OIccMultibyteSupport::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dList.707429380" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadioSlave.2004617681" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadioSlave"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCNoSizeConstaints.2009262391" name="No size constraints" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCNoSizeConstaints"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccNoVregs::list.454129499" name="Number of virtual byte registers:" superClass="iar.wtdx.stm8.toolchain.option.OIccNoVregs::list"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckFile.1052886122" name="Output list file" superClass="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckAss.774397941" name="Assembler mnemonics" superClass="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckAss"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckMsgs.295467122" name="Diagnostics" superClass="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckMsgs"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckFile.1838405764" name="Output assembler file" superClass="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckSource.250503687" name="Include source" superClass="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckSource"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCAssList::dCompilerRuntimeInfo.1874997255" name="Include call frame information" superClass="iar.wtdx.stm8.toolchain.option.OCCAssList::dCompilerRuntimeInfo"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::stdIncCheck.514623924" name="Ignore standard include directories" superClass="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::stdIncCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::incEditWithBrowse.1265896044" name="Additional include directories: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::incEditWithBrowse" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\src\FWLIB\inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\src\HARDWARE&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\src\SYSTEM&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\src\USER&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\inc&quot;"/>
+								</option>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreInclude::dEditB.1197125599" name="Preinclude file:" superClass="iar.wtdx.stm8.toolchain.option.OCCPreInclude::dEditB"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckFile.1655504647" name="Preprocessor output to file" superClass="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckComments.1960869671" name="Preserve comments" superClass="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckComments"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckLine.2102976388" name="Generate #line directives" superClass="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckLine"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCRemarks::dCheck.1407215885" name="Enable remarks" superClass="iar.wtdx.stm8.toolchain.option.OCCRemarks::dCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagSuppress::dEdit.884156368" name="Suppress these diagnostics:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagSuppress::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagRemark::dEdit.887873933" name="Treat these as remarks:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagRemark::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagWarning::dEdit.1611348533" name="Treat these as warnings:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagWarning::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagError::dEdit.1041315832" name="Treat these as errors:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagError::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagWarningsAreErrors::dCheck.1510024229" name="Treat all warnings as errors" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagWarningsAreErrors::dCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::enable.213938905" name="Use command line options" superClass="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::cmdLineParts.1047060600" name="Command line options:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::cmdLineParts"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOutputFile::filename.771680803" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccOutputFile::filename" value="$FILE_BNAME$.o" valueType="string"/>
+								<inputType id="iar.wtdx.stm8.toolchain.compiler.c.inputType.1833085832" name="IAR C Compiler Input Type (STM8)" superClass="iar.wtdx.stm8.toolchain.compiler.c.inputType"/>
+							</tool>
+							<tool id="iar.wtdx.stm8.toolchain.assembler.1160328884" name="IAR STM8 Assembler" superClass="iar.wtdx.stm8.toolchain.assembler">
+								<option defaultValue="true" id="iar.wtdx.stm8.toolchain.option.OAsmDebugInfo::enable.1148390712" name="Generate debug information" superClass="iar.wtdx.stm8.toolchain.option.OAsmDebugInfo::enable" valueType="boolean"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmCodeModel::codemodel.1965982469" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmCodeModel::codemodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDataModel::datamodel.1094103086" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmDataModel::datamodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::listFile.585113244" name="Output list file" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::listFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::outputToFile.799923164" name="Preprocessor output to file" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::outputToFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.ASTM8.wtdxToolVersion.503372415" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.ASTM8.wtdxToolVersion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmCaseSensitivity::enable.1353632498" name="User symbols are case sensitive" superClass="iar.wtdx.stm8.toolchain.option.OAsmCaseSensitivity::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMultiByteSupport::enable.1876340991" name="Enable multibyte support" superClass="iar.wtdx.stm8.toolchain.option.OAsmMultiByteSupport::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmAllowMnemonics::enable.968866342" name="Allow mnemonics in first column" superClass="iar.wtdx.stm8.toolchain.option.OAsmAllowMnemonics::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmAllowDirectives::enable.690455400" name="Allow directives in first column" superClass="iar.wtdx.stm8.toolchain.option.OAsmAllowDirectives::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMacroQuoteChars::list.741037277" name="Macro quote characters:" superClass="iar.wtdx.stm8.toolchain.option.OAsmMacroQuoteChars::list"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::noDiag.996273458" name="Do not include diagnostics" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::noDiag"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::crossRef.769221698" name="Include cross reference" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::crossRef"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::macroDefs.1182973257" name="List macro definitions" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::macroDefs"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::macroExpansion.1292042117" name="Disable macro expansion" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::macroExpansion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::assembledOnly.399789545" name="List only assembled parts" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::assembledOnly"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::truncateMultiline.396339221" name="Truncate multiline data field" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::truncateMultiline"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmStdIncludes::ignore.1736642490" name="Ignore standard include directories" superClass="iar.wtdx.stm8.toolchain.option.OAsmStdIncludes::ignore"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmIncludes::dUserIncludesWithBrowse.1147583063" name="Additional include directories: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OAsmIncludes::dUserIncludesWithBrowse"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreInclude::dEditB.1709591271" name="Preinclude file:" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreInclude::dEditB"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDefines::symbols.384248450" name="Defined symbols: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OAsmDefines::symbols"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::preserveComment.769051109" name="Preserve comments" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::preserveComment"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::lineDirective.349755252" name="Generate #line directives" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::lineDirective"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagRemarks::enable.355973769" name="Enable remarks" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagRemarks::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagSuppress::idList.465344937" name="Suppress these diagnostics:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagSuppress::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagRemark::idList.1830941804" name="Treat these as remarks:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagRemark::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagWarning::idList.141702068" name="Treat these as warnings:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagWarning::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagError::idList.1945746494" name="Treat these as errors:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagError::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagWarningsAreErrors::enable.1373072609" name="Treat all warnings as errors" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagWarningsAreErrors::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::enableLimit.160246334" name="Max number of errors:" superClass="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::enableLimit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::limit.1669663086" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::limit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::enable.1746433111" name="Use command line options" superClass="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::cmdLineParts.70834060" name="Command line options:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::cmdLineParts"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmOutputFile::fileName.2119354721" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmOutputFile::fileName"/>
+								<inputType id="iar.wtdx.stm8.toolchain.assembler.inputType.1367474359" name="IAR STM8 Assembler input type (s)" superClass="iar.wtdx.stm8.toolchain.assembler.inputType"/>
+							</tool>
+							<tool id="iar.wtdx.stm8.toolchain.linker.1215840899" name="IAR STM8 ILINK Linker" superClass="iar.wtdx.stm8.toolchain.linker">
+								<option defaultValue="true" id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyDebugSupportEnable.155181770" name="Include C-SPY debugging support" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyDebugSupportEnable" valueType="boolean"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkStackSize::dStackSize.1199167845" name="" superClass="iar.wtdx.stm8.toolchain.option.OIlinkStackSize::dStackSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkHeapSize::dHeapSize.1640047322" name="" superClass="iar.wtdx.stm8.toolchain.option.OIlinkHeapSize::dHeapSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkLibInputOutputConf::inputOutput.191226752" name="" superClass="iar.wtdx.stm8.toolchain.option.OIlinkLibInputOutputConf::inputOutput"/>
+								<option id="iar.wtdx.stm8.toolchain.option.ILINK.wtdxToolVersion.1085567502" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.ILINK.wtdxToolVersion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfOverride.1769619856" name="Override default" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfOverride"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFileName.714628835" name="Edit..." superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFileName" value="$TOOLKIT_DIR$\config\lnkstm8.icf" valueType="string"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFile.872643116" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dConfigDefines.326722348" name="Configuration file symbol definitions: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dConfigDefines"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAutoLibUsageEnable.1496128322" name="Automatic runtime library selection" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAutoLibUsageEnable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyBufferedWrite.754878" name="Buffered write" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyBufferedWrite"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAdditionalLibsWithEdit.205460274" name="Additional libraries: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAdditionalLibsWithEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dOverrideProgramEntryLabel.1584887138" name="Override default program entry" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dOverrideProgramEntryLabel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabel.12234902" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabel" value="__iar_program_start" valueType="string"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabelSelect.1378098703" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabelSelect"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dKeepSymbols.704487659" name="Keep symbols: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dKeepSymbols"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::file.395475242" name="File:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::file"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::symbol.356810600" name="Symbol:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::symbol"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::alignment.1425289628" name="Align:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::alignment"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::segment.1209565824" name="Section:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::segment"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOptMergeDuplicateSections::dEnableCheck.371804802" name="Merge duplicate sections" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOptMergeDuplicateSections::dEnableCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOutputFile::debugInfoEnable.1939587822" name="Include debug information in output" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOutputFile::debugInfoEnable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkMapFile::file.1430777196" name="Generate linker map file" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkMapFile::file"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::file.1452782246" name="Generate log file" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::file"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::autoLibSel.2111611308" name="Automatic library selection" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::autoLibSel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::initialization.118045452" name="Initialization decisions" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::initialization"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::module.479707321" name="Module selections" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::module"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::redirSymbols.802624713" name="Redirected symbols" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::redirSymbols"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::section.2074589648" name="Section selections" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::section"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::unusedFragments.1762385978" name="Unused section fragments" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::unusedFragments"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDefines.1646916154" name="Defined symbols:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDefines"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::enableRemarks.506681582" name="Enable remarks" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::enableRemarks"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::suppressDiagnostics.556221775" name="Suppress these diagnostics:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::suppressDiagnostics"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsRemarks.1912498214" name="Treat these as remarks:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsRemarks"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsWarnings.1054033980" name="Treat these as warnings:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsWarnings"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsErrors.2133308985" name="Treat these as errors:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsErrors"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::warningsAreErrors.214813672" name="Treat all warnings as errors" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::warningsAreErrors"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoFill.1898802817" name="Fill unused code memory" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoFill"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoCrc.716038256" name="Generate checksum" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoCrc"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerByte.1715748488" name="Fill pattern:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerByte"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerStart.890916493" name="Start address:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerStart"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerEnd.400044737" name="End address:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerEnd"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcSize.1283295696" name="Checksum size:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcByteOrder::dReverseCheck.481561561" name="Reverse byte order within word" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcByteOrder::dReverseCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlign.467127555" name="Alignment:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlign"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlgo2.323875087" name="Algorithm:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlgo2"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcFullSize.128316351" name="Result in full size" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcFullSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcPoly.1388074822" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcPoly"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcCompl.1119488316" name="Complement:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcCompl"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcBitOrder.70625678" name="Bit order:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcBitOrder"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcInitialValue.1261950237" name="Initial value" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcInitialValue"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcUseAsInput::dUseAsInputCheck.1577464223" name="Use as input" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcUseAsInput::dUseAsInputCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcUnitSize.1846912116" name="Checksum unit size:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcUnitSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::enable.101129088" name="Use command line options" superClass="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::cmdLineParts.1861951370" name="Command line options:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::cmdLineParts"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkInputFilePath::slave.310992860" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkInputFilePath::slave"/>
+								<option id="iar.wtdx.stm8.toolchain.option.toolEnable.1790407181" name="Generate additional output" superClass="iar.wtdx.stm8.toolchain.option.toolEnable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCOutputFormat::list.1267145328" name="Output format:" superClass="iar.wtdx.stm8.toolchain.option.OOCOutputFormat::list"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCCommandLine::producer.548876979" name="" superClass="iar.wtdx.stm8.toolchain.option.OOCCommandLine::producer"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCOutput::fileName.1057711244" name="" superClass="iar.wtdx.stm8.toolchain.option.OOCOutput::fileName" value="STM8S003_I2C_EXAMPLE.srec" valueType="string"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCOutput::outputFileOverride.1698653141" name="Override default" superClass="iar.wtdx.stm8.toolchain.option.OOCOutput::outputFileOverride"/>
+								<option id="iar.wtdx.stm8.toolchain.option.additionalLibraries.643895953" name="Additional libraries" superClass="iar.wtdx.stm8.toolchain.option.additionalLibraries"/>
+								<inputType id="iar.wtdx.stm8.toolchain.linker.objectInputType.2063334046" name="IAR STM8 Linker Input Type (o)" superClass="iar.wtdx.stm8.toolchain.linker.objectInputType">
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+								</inputType>
+							</tool>
+							<tool id="iar.wtdx.stm8.toolchain.archiver.2052489293" name="IAR STM8 Archiver" superClass="iar.wtdx.stm8.toolchain.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="iar.wtdx.stm8.toolchain.project.exe.configuration.release.1152044499">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="iar.wtdx.stm8.toolchain.project.exe.configuration.release.1152044499" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="com.iar.cdt.errorParser.com.iar.cdt.errorParser.ErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="out" artifactName="${ProjName}" buildArtefactType="com.iar.cdt.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=com.iar.cdt.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="iar.wtdx.stm8.toolchain.project.exe.configuration.release.1152044499" name="Release" parent="iar.wtdx.stm8.toolchain.project.exe.configuration.release">
+					<folderInfo id="iar.wtdx.stm8.toolchain.project.exe.configuration.release.1152044499." name="/" resourcePath="">
+						<toolChain id="iar.wtdx.stm8.toolchain.project.exe.configuration.release.toolChain.587074730" name="IAR Toolchain for STM8" superClass="iar.wtdx.stm8.toolchain.project.exe.configuration.release.toolChain">
+							<option id="iar.wtdx.stm8.toolchain.option.OGenDevice::deviceSelect.1615057339" name="Device:" superClass="iar.wtdx.stm8.toolchain.option.OGenDevice::deviceSelect" value="UnspecifiedSTM8&#9;STM8 - Unspecified" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.General.wtdxToolVersion.1177112143" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.General.wtdxToolVersion"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenCodeModel::list.767969837" name="Code model:" superClass="iar.wtdx.stm8.toolchain.option.OGenCodeModel::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenDataModel::list.993663312" name="Data model:" superClass="iar.wtdx.stm8.toolchain.option.OGenDataModel::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenOutputBinary::alternatives.707053453" name="Output file" superClass="iar.wtdx.stm8.toolchain.option.OGenOutputBinary::alternatives"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenStackSize::descriptor.1514296685" name="Stack size (bytes):" superClass="iar.wtdx.stm8.toolchain.option.OGenStackSize::descriptor" value="0x100" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenHeapSize::descriptor.1335269051" name="Heap size (bytes):" superClass="iar.wtdx.stm8.toolchain.option.OGenHeapSize::descriptor" value="0x100" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::description.404202027" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::description" value="No specifier a or A, no specifier n, no float or long long." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::description.877831195" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::description" value="Default variants of cos, sin, tan, log, log10, pow, and exp." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::list.426358152" name="Scanf formatter" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::description.2047300603" name="Description:" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::description" value="Use the normal configuration of the C/EC++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::list.847462857" name="Printf formatter" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::OutputFormatter::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::list.475654367" name="Math functions" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::MathFunctionVariants::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::description.1661269610" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenLibOptions::InputFormatter::description" value="No specifier a or A, no specifier n, no float or long long." valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::list.209668509" name="Library:" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::list"/>
+							<option id="iar.wtdx.stm8.toolchain.option.dGListPath.207641950" name="List files:" superClass="iar.wtdx.stm8.toolchain.option.dGListPath"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::listSlave.690644869" name="" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::listSlave"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::configPath.1604900446" name="Configuration file:" superClass="iar.wtdx.stm8.toolchain.option.OGenRuntimeLibrary::configPath" value="$TOOLKIT_DIR$\LIB\dlstm8smn.h" valueType="string"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dEnable.841913197" name="Enable MISRA-C" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dEnable"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dMisraVer.807710777" name="" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dMisraVer"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules04.155608022" name="Set Active MISRA-C:2004 Rules" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules04"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules98.541946283" name="Set Active MISRA-C:1998 Rules" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dRules98"/>
+							<option id="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dVerbose.1446615973" name="Log MISRA C-Settings" superClass="iar.wtdx.stm8.toolchain.option.OGeneralMisra::dVerbose"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="iar.wtdx.stm8.toolchain.targetPlatform.ELF.95728216" isAbstract="false" name="IAR STM8 Target platform (ELF)" osList="win32,linux" superClass="iar.wtdx.stm8.toolchain.targetPlatform.ELF"/>
+							<builder buildPath="${workspace_loc:/example project}/Release" id="iar.wtdx.stm8.toolchain.builder.625391387" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT 内部构建器" superClass="iar.wtdx.stm8.toolchain.builder"/>
+							<tool id="iar.wtdx.stm8.toolchain.compiler.598004630" name="IAR STM8 C/C++ Compiler" superClass="iar.wtdx.stm8.toolchain.compiler">
+								<option defaultValue="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadios.OIccOptimization::kHigh" id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadios.1029407111" name="Level" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadios" valueType="enumerated"/>
+								<option defaultValue="OIccOptimization::kComSubElim,1,1;OIccOptimization::kLoopUnroll,1,1;OIccOptimization::kFuncInline,1,1;OIccOptimization::kCodeMotion,1,1;OIccOptimization::kTBAA,1,1;OIccOptimization::kCrossCall,1,1;" id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCList.881797304" name="Enabled transformations:" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCList" valueType="string"/>
+								<option defaultValue="false" id="iar.wtdx.stm8.toolchain.option.OIccDebugInfo::enable.1291835093" name="Generate debug information" superClass="iar.wtdx.stm8.toolchain.option.OIccDebugInfo::enable" valueType="boolean"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDefines::dEdit.679869534" name="Defined symbols: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OCCDefines::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCodeModel::codemodel.794102257" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccCodeModel::codemodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccDataModel::datamodel.1799728116" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccDataModel::datamodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccLibConfigHeader::header.1508709430" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccLibConfigHeader::header"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules04.1905548891" name="Set Active MISRA-C:2004 Rules" superClass="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules04"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dOverride.57968219" name="Override General MISRA-C Settings" superClass="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dOverride"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules98.682503590" name="Set Active MISRA-C:1998 Rules" superClass="iar.wtdx.stm8.toolchain.option.OCompilerMisra::dRules98"/>
+								<option id="iar.wtdx.stm8.toolchain.option.ICCSTM8.wtdxToolVersion.201559766" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.ICCSTM8.wtdxToolVersion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccLanguage::alternatives.1751653903" name="Language" superClass="iar.wtdx.stm8.toolchain.option.OIccLanguage::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::alternatives.1878439806" name="C dialect" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::inlineSemantics.1885832627" name="C++ inline semantics" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::inlineSemantics"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::VLA.1382474371" name="Allow VLA" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::VLA"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCDialect::reqPrototypes.684229358" name="Require prototypes" superClass="iar.wtdx.stm8.toolchain.option.OIccCDialect::reqPrototypes"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccLangConformance::alternatives.516105490" name="Language conformance" superClass="iar.wtdx.stm8.toolchain.option.OIccLangConformance::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCppDialect::alternatives.1931339006" name="C++ dialect" superClass="iar.wtdx.stm8.toolchain.option.OIccCppDialect::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccCppDialect::staticDestr.794054421" name="Destroy static objects" superClass="iar.wtdx.stm8.toolchain.option.OIccCppDialect::staticDestr"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccSignedChar::alternatives.230820386" name="Plain 'char' is" superClass="iar.wtdx.stm8.toolchain.option.OIccSignedChar::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccFloatingPointSemantics::alternatives.1425299874" name="Floating-point semantics" superClass="iar.wtdx.stm8.toolchain.option.OIccFloatingPointSemantics::alternatives"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccMultibyteSupport::enable.361842550" name="Enable multibyte support" superClass="iar.wtdx.stm8.toolchain.option.OIccMultibyteSupport::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dList.506788277" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadioSlave.328224860" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadioSlave" value="iar.wtdx.stm8.toolchain.option.OIccOptimization::dRadioSlave.OIccOptimization::kHigh" valueType="enumerated"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCNoSizeConstaints.2059080653" name="No size constraints" superClass="iar.wtdx.stm8.toolchain.option.OIccOptimization::dCNoSizeConstaints"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccNoVregs::list.449581926" name="Number of virtual byte registers:" superClass="iar.wtdx.stm8.toolchain.option.OIccNoVregs::list"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckFile.852231295" name="Output list file" superClass="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckAss.830759826" name="Assembler mnemonics" superClass="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckAss"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckMsgs.1365652918" name="Diagnostics" superClass="iar.wtdx.stm8.toolchain.option.OCCCList::dCheckMsgs"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckFile.539646341" name="Output assembler file" superClass="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckSource.400496613" name="Include source" superClass="iar.wtdx.stm8.toolchain.option.OCCAssList::dCheckSource"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCAssList::dCompilerRuntimeInfo.958706309" name="Include call frame information" superClass="iar.wtdx.stm8.toolchain.option.OCCAssList::dCompilerRuntimeInfo"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::stdIncCheck.481141580" name="Ignore standard include directories" superClass="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::stdIncCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::incEditWithBrowse.341419920" name="Additional include directories: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OCCIncludePaths2::incEditWithBrowse"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreInclude::dEditB.1018108150" name="Preinclude file:" superClass="iar.wtdx.stm8.toolchain.option.OCCPreInclude::dEditB"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckFile.146213419" name="Preprocessor output to file" superClass="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckComments.1213891864" name="Preserve comments" superClass="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckComments"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckLine.1736401592" name="Generate #line directives" superClass="iar.wtdx.stm8.toolchain.option.OCCPreprocFile::dCheckLine"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCRemarks::dCheck.225387856" name="Enable remarks" superClass="iar.wtdx.stm8.toolchain.option.OCCRemarks::dCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagSuppress::dEdit.998716527" name="Suppress these diagnostics:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagSuppress::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagRemark::dEdit.130700864" name="Treat these as remarks:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagRemark::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagWarning::dEdit.290722313" name="Treat these as warnings:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagWarning::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagError::dEdit.1397636817" name="Treat these as errors:" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagError::dEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OCCDiagWarningsAreErrors::dCheck.1259639357" name="Treat all warnings as errors" superClass="iar.wtdx.stm8.toolchain.option.OCCDiagWarningsAreErrors::dCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::enable.1830867645" name="Use command line options" superClass="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::cmdLineParts.661711444" name="Command line options:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OIccExtraOptions::cmdLineParts"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIccOutputFile::filename.1934460856" name="" superClass="iar.wtdx.stm8.toolchain.option.OIccOutputFile::filename" value="$FILE_BNAME$.o" valueType="string"/>
+								<inputType id="iar.wtdx.stm8.toolchain.compiler.c.inputType.929833776" name="IAR C Compiler Input Type (STM8)" superClass="iar.wtdx.stm8.toolchain.compiler.c.inputType"/>
+							</tool>
+							<tool id="iar.wtdx.stm8.toolchain.assembler.2053950900" name="IAR STM8 Assembler" superClass="iar.wtdx.stm8.toolchain.assembler">
+								<option defaultValue="false" id="iar.wtdx.stm8.toolchain.option.OAsmDebugInfo::enable.100827865" name="Generate debug information" superClass="iar.wtdx.stm8.toolchain.option.OAsmDebugInfo::enable" valueType="boolean"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmCodeModel::codemodel.498499743" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmCodeModel::codemodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDataModel::datamodel.1626511412" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmDataModel::datamodel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::listFile.1693630576" name="Output list file" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::listFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::outputToFile.589008119" name="Preprocessor output to file" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::outputToFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.ASTM8.wtdxToolVersion.913400905" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.ASTM8.wtdxToolVersion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmCaseSensitivity::enable.160470857" name="User symbols are case sensitive" superClass="iar.wtdx.stm8.toolchain.option.OAsmCaseSensitivity::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMultiByteSupport::enable.1900050940" name="Enable multibyte support" superClass="iar.wtdx.stm8.toolchain.option.OAsmMultiByteSupport::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmAllowMnemonics::enable.872487097" name="Allow mnemonics in first column" superClass="iar.wtdx.stm8.toolchain.option.OAsmAllowMnemonics::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmAllowDirectives::enable.324521813" name="Allow directives in first column" superClass="iar.wtdx.stm8.toolchain.option.OAsmAllowDirectives::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMacroQuoteChars::list.1237459340" name="Macro quote characters:" superClass="iar.wtdx.stm8.toolchain.option.OAsmMacroQuoteChars::list"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::noDiag.1287193401" name="Do not include diagnostics" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::noDiag"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::crossRef.1846934606" name="Include cross reference" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::crossRef"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::macroDefs.1598209241" name="List macro definitions" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::macroDefs"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::macroExpansion.612694954" name="Disable macro expansion" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::macroExpansion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::assembledOnly.210778769" name="List only assembled parts" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::assembledOnly"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmListing::truncateMultiline.1870019256" name="Truncate multiline data field" superClass="iar.wtdx.stm8.toolchain.option.OAsmListing::truncateMultiline"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmStdIncludes::ignore.865334377" name="Ignore standard include directories" superClass="iar.wtdx.stm8.toolchain.option.OAsmStdIncludes::ignore"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmIncludes::dUserIncludesWithBrowse.1899428741" name="Additional include directories: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OAsmIncludes::dUserIncludesWithBrowse"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreInclude::dEditB.1252096915" name="Preinclude file:" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreInclude::dEditB"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDefines::symbols.1310599799" name="Defined symbols: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OAsmDefines::symbols"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::preserveComment.653480157" name="Preserve comments" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::preserveComment"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::lineDirective.810445962" name="Generate #line directives" superClass="iar.wtdx.stm8.toolchain.option.OAsmPreprocOutput::lineDirective"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagRemarks::enable.1376302178" name="Enable remarks" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagRemarks::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagSuppress::idList.1387276592" name="Suppress these diagnostics:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagSuppress::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagRemark::idList.614345477" name="Treat these as remarks:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagRemark::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagWarning::idList.924443967" name="Treat these as warnings:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagWarning::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagError::idList.260993273" name="Treat these as errors:" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagError::idList"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmDiagWarningsAreErrors::enable.418781863" name="Treat all warnings as errors" superClass="iar.wtdx.stm8.toolchain.option.OAsmDiagWarningsAreErrors::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::enableLimit.2113569582" name="Max number of errors:" superClass="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::enableLimit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::limit.1992367813" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmMaxNumberErrors::limit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::enable.2018471628" name="Use command line options" superClass="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::cmdLineParts.94909417" name="Command line options:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OAsmExtraOptions::cmdLineParts"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OAsmOutputFile::fileName.841522252" name="" superClass="iar.wtdx.stm8.toolchain.option.OAsmOutputFile::fileName"/>
+								<inputType id="iar.wtdx.stm8.toolchain.assembler.inputType.1598037033" name="IAR STM8 Assembler input type (s)" superClass="iar.wtdx.stm8.toolchain.assembler.inputType"/>
+							</tool>
+							<tool id="iar.wtdx.stm8.toolchain.linker.337009568" name="IAR STM8 ILINK Linker" superClass="iar.wtdx.stm8.toolchain.linker">
+								<option defaultValue="false" id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyDebugSupportEnable.1376269300" name="Include C-SPY debugging support" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyDebugSupportEnable" valueType="boolean"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkStackSize::dStackSize.251847838" name="" superClass="iar.wtdx.stm8.toolchain.option.OIlinkStackSize::dStackSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkHeapSize::dHeapSize.640367960" name="" superClass="iar.wtdx.stm8.toolchain.option.OIlinkHeapSize::dHeapSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkLibInputOutputConf::inputOutput.298061146" name="" superClass="iar.wtdx.stm8.toolchain.option.OIlinkLibInputOutputConf::inputOutput"/>
+								<option id="iar.wtdx.stm8.toolchain.option.ILINK.wtdxToolVersion.1222414326" name="wtd version" superClass="iar.wtdx.stm8.toolchain.option.ILINK.wtdxToolVersion"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfOverride.1571477048" name="Override default" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfOverride"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFileName.1033227580" name="Edit..." superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFileName" value="$TOOLKIT_DIR$\config\lnkstm8.icf" valueType="string"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFile.1380699720" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dIcfFile"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dConfigDefines.866946036" name="Configuration file symbol definitions: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dConfigDefines"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAutoLibUsageEnable.1701339104" name="Automatic runtime library selection" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAutoLibUsageEnable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyBufferedWrite.36575546" name="Buffered write" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dCspyBufferedWrite"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAdditionalLibsWithEdit.342718245" name="Additional libraries: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLibrary::dAdditionalLibsWithEdit"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dOverrideProgramEntryLabel.185710646" name="Override default program entry" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dOverrideProgramEntryLabel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabel.1769068553" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabel" value="__iar_program_start" valueType="string"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabelSelect.1116484609" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dProgramEntryLabelSelect"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dKeepSymbols.313608149" name="Keep symbols: (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dKeepSymbols"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::file.46989069" name="File:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::file"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::symbol.533987002" name="Symbol:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::symbol"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::alignment.848757208" name="Align:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::alignment"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::segment.2071095329" name="Section:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkRawBinaryImage::segment"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOptMergeDuplicateSections::dEnableCheck.1479865223" name="Merge duplicate sections" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOptMergeDuplicateSections::dEnableCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOutputFile::debugInfoEnable.1754169499" name="Include debug information in output" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkOutputFile::debugInfoEnable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkMapFile::file.72117160" name="Generate linker map file" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkMapFile::file"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::file.1870037615" name="Generate log file" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::file"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::autoLibSel.1516265899" name="Automatic library selection" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::autoLibSel"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::initialization.1751708533" name="Initialization decisions" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::initialization"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::module.618746587" name="Module selections" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::module"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::redirSymbols.731504434" name="Redirected symbols" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::redirSymbols"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::section.1808563225" name="Section selections" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::section"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::unusedFragments.1533322082" name="Unused section fragments" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkLogFile::unusedFragments"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDefines.1912585561" name="Defined symbols:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDefines"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::enableRemarks.790086041" name="Enable remarks" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::enableRemarks"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::suppressDiagnostics.1623306428" name="Suppress these diagnostics:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::suppressDiagnostics"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsRemarks.686248674" name="Treat these as remarks:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsRemarks"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsWarnings.1702248119" name="Treat these as warnings:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsWarnings"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsErrors.1095327960" name="Treat these as errors:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::treatAsErrors"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::warningsAreErrors.1837232708" name="Treat all warnings as errors" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkDiagnostics::warningsAreErrors"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoFill.1809224218" name="Fill unused code memory" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoFill"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoCrc.1621897248" name="Generate checksum" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dDoCrc"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerByte.2132762767" name="Fill pattern:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerByte"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerStart.468275946" name="Start address:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerStart"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerEnd.1675522655" name="End address:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dFillerEnd"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcSize.548010753" name="Checksum size:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcByteOrder::dReverseCheck.1128134251" name="Reverse byte order within word" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcByteOrder::dReverseCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlign.5929221" name="Alignment:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlign"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlgo2.220170281" name="Algorithm:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcAlgo2"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcFullSize.1340858999" name="Result in full size" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcFullSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcPoly.1668354536" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcPoly"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcCompl.1411265330" name="Complement:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcCompl"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcBitOrder.810598081" name="Bit order:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcBitOrder"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcInitialValue.1085306746" name="Initial value" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcInitialValue"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcUseAsInput::dUseAsInputCheck.195015506" name="Use as input" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkCrcUseAsInput::dUseAsInputCheck"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcUnitSize.174997122" name="Checksum unit size:" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::dCrcUnitSize"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::enable.34926060" name="Use command line options" superClass="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::enable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::cmdLineParts.723868730" name="Command line options:  (one per line)" superClass="iar.wtdx.stm8.toolchain.option.OIlinkExtraOptions::cmdLineParts"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkInputFilePath::slave.882418013" name="" superClass="iar.wtdx.stm8.toolchain.option.OhIlinkCom::OIlinkInputFilePath::slave"/>
+								<option id="iar.wtdx.stm8.toolchain.option.toolEnable.286338855" name="Generate additional output" superClass="iar.wtdx.stm8.toolchain.option.toolEnable"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCOutputFormat::list.2132877664" name="Output format:" superClass="iar.wtdx.stm8.toolchain.option.OOCOutputFormat::list"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCCommandLine::producer.1519515533" name="" superClass="iar.wtdx.stm8.toolchain.option.OOCCommandLine::producer"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCOutput::fileName.955315976" name="" superClass="iar.wtdx.stm8.toolchain.option.OOCOutput::fileName" value="Stm8s003_I2C.srec" valueType="string"/>
+								<option id="iar.wtdx.stm8.toolchain.option.OOCOutput::outputFileOverride.1668063353" name="Override default" superClass="iar.wtdx.stm8.toolchain.option.OOCOutput::outputFileOverride"/>
+								<option id="iar.wtdx.stm8.toolchain.option.additionalLibraries.1781820165" name="Additional libraries" superClass="iar.wtdx.stm8.toolchain.option.additionalLibraries"/>
+								<inputType id="iar.wtdx.stm8.toolchain.linker.objectInputType.1207920353" name="IAR STM8 Linker Input Type (o)" superClass="iar.wtdx.stm8.toolchain.linker.objectInputType">
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+								</inputType>
+							</tool>
+							<tool id="iar.wtdx.stm8.toolchain.archiver.1930351158" name="IAR STM8 Archiver" superClass="iar.wtdx.stm8.toolchain.archiver"/>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="example project.iar.wtdx.stm8.toolchain.project.exe.1723782065" name="Executable (IAR)" projectType="iar.wtdx.stm8.toolchain.project.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+		<project-mappings>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.asmSource" language="com.iar.cdt.stm8.toolchain.ui.asm"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cHeader" language="com.iar.cdt.stm8.toolchain.IARc"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cSource" language="com.iar.cdt.stm8.toolchain.IARc"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxHeader" language="com.iar.cdt.stm8.toolchain.IARcpp"/>
+			<content-type-mapping configuration="" content-type="org.eclipse.cdt.core.cxxSource" language="com.iar.cdt.stm8.toolchain.IARcpp"/>
+		</project-mappings>
+	</storageModule>
+	<storageModule moduleId="refreshScope"/>
+</cproject>
