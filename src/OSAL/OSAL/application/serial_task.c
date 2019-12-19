@@ -68,8 +68,8 @@ uint16 Serial_Task_EventProcess(uint8 task_id,uint16 task_event)
 	if(task_event & LED_FLICKER)
 	{
 		LED0 = ~LED0;
-        Usart_Puts("STM8 OSAL !\r\n");
-        // Usart_Printf("STM8 OSAL !\r\n");
+        Usart_Puts("STM8S Done !\r\n");
+        Usart_Printf("STM8s OSAL !\r\n");
 	  	return task_event ^ LED_FLICKER;
 	}
 

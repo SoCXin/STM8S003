@@ -260,6 +260,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+  GPIO_WriteReverse(GPIOD, GPIO_PIN_3);
 }
 
 #else /*STM8S208, STM8S207, STM8S105 or STM8S103 or STM8AF62Ax or STM8AF52Ax or STM8AF626x */
@@ -302,6 +303,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+  GPIO_WriteReverse(GPIOD, GPIO_PIN_3);
 }
 
 /**
@@ -329,6 +331,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+  GPIO_WriteReverse(GPIOD, GPIO_PIN_3);
 }
 
 /**
@@ -341,6 +344,7 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   /* In order to detect unexpected events during development,
      it is recommended to set a breakpoint on the following instruction.
   */
+  GPIO_WriteReverse(GPIOD, GPIO_PIN_3);
 }
 #endif /*STM8S105*/
 

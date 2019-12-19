@@ -3,7 +3,7 @@
 
 #include "iostm8s003f3.h"
 
-#define LED0		PA_ODR_ODR3
+#define LED0		PD_ODR_ODR3
 
 void LED_Init(void);
 

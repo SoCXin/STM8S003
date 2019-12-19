@@ -1632,12 +1632,6 @@
             <name>$PROJ_DIR$\user\led.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\user\main.c</name>
-            <excluded>
-                <configuration>Debug</configuration>
-            </excluded>
-        </file>
-        <file>
             <name>$PROJ_DIR$\OSAL\application\osal_main.c</name>
         </file>
         <file>
