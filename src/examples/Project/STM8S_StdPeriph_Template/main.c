@@ -1,10 +1,11 @@
 /**
   ******************************************************************************
-  * @file    TIM2_OC_ActiveMode\main.c
+  * @file UART1_Printf\main.c
+  * @brief This file contains the main function for: retarget the C library printf
+  *        /scanf functions to the UART1 example.
   * @author  MCD Application Team
   * @version  V2.2.0
   * @date     30-September-2014
-  * @brief   This file contains the main function for TIM2 OC ActiveMode Example.
   ******************************************************************************
   * @attention
   *
@@ -27,25 +28,27 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s.h"
-
+#include "stdio.h"
 /**
-  * @addtogroup TIM2_OC_ActiveMode
+  * @addtogroup UART1_Printf
   * @{
   */
-
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-#define CCR1_Val  ((uint16_t)976)
-#define CCR2_Val  ((uint16_t)488)
-#define CCR3_Val  ((uint16_t)244)
+#ifdef _RAISONANCE_
+#define PUTCHAR_PROTOTYPE int putchar (char c)
+#define GETCHAR_PROTOTYPE int getchar (void)
+#elif defined (_COSMIC_)
+#define PUTCHAR_PROTOTYPE char putchar (char c)
+#define GETCHAR_PROTOTYPE char getchar (void)
+#else /* _IAR_ */
+#define PUTCHAR_PROTOTYPE int putchar (int c)
+#define GETCHAR_PROTOTYPE int getchar (void)
+#endif /* _RAISONANCE_ */
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-static void GPIO_Config(void);
-static void TIM2_Config(void);
 /* Private functions ---------------------------------------------------------*/
-/* Public functions ----------------------------------------------------------*/
-
 /**
   * @brief  Main program.
   * @param  None
@@ -53,78 +56,65 @@ static void TIM2_Config(void);
   */
 void main(void)
 {
-  /* GPIO configuration -----------------------------------------*/
-  GPIO_Config();  
-  GPIO_WriteHigh(GPIOD, GPIO_PIN_3);
+  char ans;
+  /*High speed internal clock prescaler: 1*/
+  CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1);
+    
+  UART1_DeInit();
+  /* UART1 configuration ------------------------------------------------------*/
+  /* UART1 configured as follow:
+        - BaudRate = 115200 baud  
+        - Word Length = 8 Bits
+        - One Stop Bit
+        - No parity
+        - Receive and transmit enabled
+        - UART1 Clock disabled
+  */
+  UART1_Init((uint32_t)9600, UART1_WORDLENGTH_8D, UART1_STOPBITS_1, UART1_PARITY_NO,
+              UART1_SYNCMODE_CLOCK_DISABLE, UART1_MODE_TXRX_ENABLE);
 
-  TIM1_TimeBaseInit(2, TIM1_COUNTERMODE_UP, 4095, 0);
-  TIM1_CCPreloadControl(ENABLE);
-  // TIM1_ITConfig(TIM1_IT_COM, ENABLE);
-  TIM1_ITConfig(TIM1_IT_UPDATE, ENABLE);
-  TIM1_Cmd(ENABLE);
-
-  /* TIM2 configuration -----------------------------------------*/
-  TIM2_Config();  
-  enableInterrupts();
+  /* Output a message on Hyperterminal using printf function */
+  printf("\n\rUART1 Example :retarget the C library printf()/getchar() functions to the UART\n\r");
+  printf("\n\rEnter Text\n\r");
 
   while (1)
-  {} 
+  {
+    ans = getchar();
+    printf("%c", ans);  
+  }
 }
 
 /**
-  * @brief  Configure PG6 to allow delay of TIM2 channels computation
-  * @param  None
-  * @retval None
+  * @brief Retargets the C library printf function to the UART.
+  * @param c Character to send
+  * @retval char Character sent
   */
-static void GPIO_Config(void)
+PUTCHAR_PROTOTYPE
 {
-  /* Set PG.6 pin */
-  GPIO_Init(GPIOD, GPIO_PIN_3, GPIO_MODE_OUT_PP_LOW_FAST);
-  GPIO_WriteHigh(GPIOD, GPIO_PIN_3);
+  /* Write a character to the UART1 */
+  UART1_SendData8(c);
+  /* Loop until the end of transmission */
+  while (UART1_GetFlagStatus(UART1_FLAG_TXE) == RESET);
+
+  return (c);
 }
 
 /**
-  * @brief  Configure TIM2 peripheral to generate 3 different signals with 3
-  *         different delays
-  * @param  None
-  * @retval None
+  * @brief Retargets the C library scanf function to the USART.
+  * @param None
+  * @retval char Character to Read
   */
-static void TIM2_Config(void)
+GETCHAR_PROTOTYPE
 {
-  /* Time base configuration */      
-  TIM2_TimeBaseInit(TIM2_PRESCALER_2048, 65535);
-
-  /* Prescaler configuration */
-  TIM2_PrescalerConfig(TIM2_PRESCALER_2048, TIM2_PSCRELOADMODE_IMMEDIATE);
-
-  /* Output Compare Active Mode configuration: Channel1 */
-  /*
-    TIM2_OCMode = TIM2_OCMODE_ACTIVE
-    TIM2_OutputState = TIM2_OUTPUTSTATE_ENABLE
-    TIM2_Pulse = CCR1_Val
-    TIM2_OCPolarity = TIM2_OCPOLARITY_HIGH
-  */
-  TIM2_OC1Init(TIM2_OCMODE_ACTIVE, TIM2_OUTPUTSTATE_ENABLE,CCR1_Val, TIM2_OCPOLARITY_HIGH);
-  
-  TIM2_OC1PreloadConfig(DISABLE);
-
-  /* Output Compare Active Mode configuration: Channel2 */
-  
-  /*TIM2_Pulse = CCR2_Val  */
-  
-  TIM2_OC2Init(TIM2_OCMODE_ACTIVE, TIM2_OUTPUTSTATE_ENABLE,CCR2_Val, TIM2_OCPOLARITY_HIGH); 
-  TIM2_OC2PreloadConfig(DISABLE);
-
-  /* Output Compare Active Mode configuration: Channel3 */
-  /*
-  TIM2_Pulse = CCR3_Val
-  */
-  TIM2_OC3Init(TIM2_OCMODE_ACTIVE, TIM2_OUTPUTSTATE_ENABLE,CCR3_Val, TIM2_OCPOLARITY_HIGH);
-  TIM2_OC3PreloadConfig(DISABLE);
-  TIM2_ARRPreloadConfig(ENABLE);
-  
-  /* TIM2 enable counter */
-  TIM2_Cmd(ENABLE);
+#ifdef _COSMIC_
+  char c = 0;
+#else
+  int c = 0;
+#endif
+  /* Loop until the Read data register flag is SET */
+  while (UART1_GetFlagStatus(UART1_FLAG_RXNE) == RESET);
+    c = UART1_ReceiveData8();
+  return (c);
 }
 
 #ifdef USE_FULL_ASSERT
