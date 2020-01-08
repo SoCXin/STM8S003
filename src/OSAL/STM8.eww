@@ -2,7 +2,7 @@
 
 <workspace>
   <project>
-    <path>$WS_DIR$\STM8 Test.ewp</path>
+    <path>$WS_DIR$\STM8.ewp</path>
   </project>
   <batchBuild/>
 </workspace>
