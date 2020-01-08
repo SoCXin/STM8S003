@@ -29,10 +29,6 @@
 #include "stm8s.h"
 #include "main.h"
 
-/**
-  * @addtogroup UART1_Interrupt
-  * @{
-  */
 /* Private typedef -----------------------------------------------------------*/
 typedef enum { FAILED = 0, PASSED = !FAILED} TestStatus;
 /* Private variables ---------------------------------------------------------*/
