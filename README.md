@@ -2,7 +2,7 @@
 [![sites](http://182.61.61.133/link/resources/SoC.png)](https://stop.stops.top) 
 
 #### [Vendor](https://github.com/sochub/Vendor)：[ST](https://github.com/sochub/ST)
-#### [Core](https://github.com/sochub/STM8)：[STM8](https://github.com/sochub)
+#### [Core](https://github.com/sochub/STM8)：[STM8](https://github.com/sochub/STM8)
 #### [Level](https://github.com/sochub/Level)：16MHz 
 
 ## [STM8S003描述](https://github.com/sochub/STM8S003/wiki) 
@@ -34,7 +34,7 @@
 [STM8S003](https://github.com/sochub/STM8S003)是ST单片机中综合成本最低的产品，最常用封装规格TSSOP20，适用于逻辑简单，对IIC/SPI/UART等常规通信接口有需求
 
 - 替换产品[N76E003](https://github.com/sochub/N76E003) 
-- 升级产品[STM8S103](https://github.com/sochub/STM8S103) 
+- 升级产品[STM8S105](https://github.com/sochub/STM8S105) 
 
 ##  [SoC资源平台](http://www.qitas.cn)  
 
