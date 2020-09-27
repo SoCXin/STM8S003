@@ -1,0 +1,9 @@
+*.dep
+*.log
+*.ewt
+out/
+Release/
+settings/
+*.pyc
+.pio/
+.vscode/
