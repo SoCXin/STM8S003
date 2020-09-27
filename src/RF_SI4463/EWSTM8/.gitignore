@@ -4,6 +4,7 @@
 *.ewd
 out/
 Debug/
+STM8S003/
 settings/
 *.pyc
 .pio/
