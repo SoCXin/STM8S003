@@ -1,15 +1,16 @@
-#include "IOSTM8S103K3.h"
+//#include "IOSTM8S103K3.h"
+#include "iostm8s003f3.h"
 unsigned char i=0;
 
 void Init_Timer4(void)
 {
-    TIM4_CR1=0x01;//Ê¹ÄÜ¼ÆÊıÆ÷
+    TIM4_CR1=0x01;//ä½¿èƒ½è®¡æ•°å™¨
   //TIM4_IER=0x00;
-    TIM4_IER=0x01;//¸üĞÂÖĞ¶ÏÊ¹ÄÜ
+    TIM4_IER=0x01;//æ›´æ–°ä¸­æ–­ä½¿èƒ½
     TIM4_EGR=0x01;
-    TIM4_CNTR=255;//¼ÆÊıÆ÷Öµ
-    TIM4_ARR=255;//×Ô¶¯ÖØ×°µÄÖµ
-    TIM4_PSCR=0x07;//·ÖÆµÖµ
+    TIM4_CNTR=255;//è®¡æ•°å™¨å€¼
+    TIM4_ARR=255;//è‡ªåŠ¨é‡è£…çš„å€¼
+    TIM4_PSCR=0x07;//åˆ†é¢‘å€¼
 
 }
 void Init_GPIO(void)
@@ -20,38 +21,38 @@ void Init_GPIO(void)
 }
 
 /*
-ÖĞ¶Ï
-ÉùÃ÷Ò»¸öÖĞ¶ÏÏòÁ¿£¬ËµÃ÷ÈçÏÂ£º
+ä¸­æ–­
+å£°æ˜ä¸€ä¸ªä¸­æ–­å‘é‡ï¼Œè¯´æ˜å¦‚ä¸‹ï¼š
 
 #pragma vector=0x02
 __interrupt void interrupt_handler(void)
 {
 
 }
-ËµÃ÷:
-#pragma vector£º
-ÊÇIARÖĞ¶ÏÏòÁ¿Ö¸Áî
+è¯´æ˜:
+#pragma vectorï¼š
+æ˜¯IARä¸­æ–­å‘é‡æŒ‡ä»¤
 =0x02 :
-ÆäÊı×Ö´ú±íÖĞ¶ÏÏòÁ¿±àºÅ¡£STM8µÄµØÖ·ÊÇ´Ó0x00800¿ªÊ¼£¬IARµÄÖĞ¶Ï±àºÅ´Ó0¿ªÊ¼¡£ÖĞ¶ÏÏòÁ¿ºÅÒÀ´Î°´ÕÕÖĞ¶ÏµØÖ·µİÔö¡£Èç£º
-¸´Î»ÏòÁ¿ÊÇ0x008000£¬ÖĞ¶ÏÏòÁ¿ºÅÊÇ0x00
-TRAPµÄÖĞ¶ÏµØÖ·ÊÇ0x008004ÖĞ¶ÏÏòÁ¿ºÅÊÇ0x01
-SPIÖĞ¶ÏºÅÊÇ0x0C;ÏêÏ¸¼ûÏÂ±í
+å…¶æ•°å­—ä»£è¡¨ä¸­æ–­å‘é‡ç¼–å·ã€‚STM8çš„åœ°å€æ˜¯ä»0x00800å¼€å§‹ï¼ŒIARçš„ä¸­æ–­ç¼–å·ä»0å¼€å§‹ã€‚ä¸­æ–­å‘é‡å·ä¾æ¬¡æŒ‰ç…§ä¸­æ–­åœ°å€é€’å¢ã€‚å¦‚ï¼š
+å¤ä½å‘é‡æ˜¯0x008000ï¼Œä¸­æ–­å‘é‡å·æ˜¯0x00
+TRAPçš„ä¸­æ–­åœ°å€æ˜¯0x008004ä¸­æ–­å‘é‡å·æ˜¯0x01
+SPIä¸­æ–­å·æ˜¯0x0C;è¯¦ç»†è§ä¸‹è¡¨
 __interrupt void interrupt_handler
 (void):
-ÊÇÉùÃ÷Ò»¸öÖĞ¶Ïº¯Êı£¬×¢ÒâinterruptÊÇÁ½¸öÏÂ»®Ïß£¬interrupt_handlerÊÇÖĞ¶Ïº¯ÊıÃû×Ö£¬¿É×Ô¼º¶¨Òå
+æ˜¯å£°æ˜ä¸€ä¸ªä¸­æ–­å‡½æ•°ï¼Œæ³¨æ„interruptæ˜¯ä¸¤ä¸ªä¸‹åˆ’çº¿ï¼Œinterrupt_handleræ˜¯ä¸­æ–­å‡½æ•°åå­—ï¼Œå¯è‡ªå·±å®šä¹‰
 
 */
 #pragma vector=TIM4_OVR_UIF_vector//0x19
-__interrupt void TIM4_OVR_UIF_IRQHandler(void)//¶ÔÓ¦IAPµÄÖĞ¶ÏµØÖ·£º0x8060
+__interrupt void TIM4_OVR_UIF_IRQHandler(void)//å¯¹åº”IAPçš„ä¸­æ–­åœ°å€ï¼š0x8060
 {
   //asm("JP 0x9060\n");
-      i++;
-      TIM4_SR=0x00;
-      if(i==61)
-      {
-	  PB_ODR^=0x20;
-	  i=0;
-      }
+    i++;
+    TIM4_SR=0x00;
+    if(i==61)
+    {
+        PB_ODR^=0x20;
+        i=0;
+    }
       //return;
 }
 
@@ -59,7 +60,7 @@ int main( void )
 {
     Init_GPIO();
     Init_Timer4();
-    asm("rim");//¿ªÈ«¾ÖÖĞ¶Ï
+    asm("rim");//å¼€å…¨å±€ä¸­æ–­
     while(1);
     //return 0;
 }

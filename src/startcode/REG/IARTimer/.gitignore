@@ -2,6 +2,8 @@
 *.log
 *.ewt
 out/
+Debug/
+Release/
 settings/
 *.pyc
 .pio/
