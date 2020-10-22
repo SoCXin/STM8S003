@@ -1,4 +1,6 @@
-#include"iostm8s103K3.h"
+
+#include "iostm8s003f3.h"
+
 void Init_UART1(void)
 {
       UART1_CR1=0x00;
@@ -24,11 +26,12 @@ void UART1_sendchar(unsigned char c)
 }
 main()
 {
-	//unsigned char i=0;
-	Init_UART1();
-	asm("rim");//开中断，sim为关中断
-	while (1);
+      //unsigned char i=0;
+      Init_UART1();
+      asm("rim");//开中断，sim为关中断
+      while (1);
 }
+
 //将收到的数据再发送出去
 #pragma vector= UART1_R_OR_vector//0x19
 __interrupt void UART1_R_OR_IRQHandler(void)

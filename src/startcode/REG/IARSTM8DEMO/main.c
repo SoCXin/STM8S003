@@ -11,7 +11,7 @@ int main( void )
     {
         for(i=0;i<100;i++)
             for(j=0;j<200;j++);
-                PD_ODR^=0x0C;
+        PD_ODR^=0x0C;
         for(i=0;i<100;i++)
             for(j=0;j<200;j++);
     }

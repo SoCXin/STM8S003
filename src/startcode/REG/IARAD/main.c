@@ -1,77 +1,79 @@
-#include"iostm8s103K3.h"
+
+#include "iostm8s003f3.h"
+
 unsigned char HexTable[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 void Init_AD(void)
 {
-		ADC_CSR=0x03; //Ñ¡ÔñÍ¨µÀ AIN3/PD2
-		ADC_CR2|=0x08; // Êý¾ÝÅÅÁÐ,ÓÒ¶ÔÆë
-		ADC_TDRL=0x01;
+    ADC_CSR=0x03; //é€‰æ‹©é€šé“ AIN3/PD2
+    ADC_CR2|=0x08; // æ•°æ®æŽ’åˆ—,å³å¯¹é½
+    ADC_TDRL=0x01;
 }
+
 void Init_UART1(void)
 {
-      UART1_CR1=0x00;
-      UART1_CR2=0x00;
-      UART1_CR3=0x00;
-      // ÉèÖÃ²¨ÌØÂÊ£¬±ØÐë×¢ÒâÒÔÏÂ¼¸µã£º
-      // (1) ±ØÐëÏÈÐ´BRR2
-      // (2) BRR1´æ·ÅµÄÊÇ·ÖÆµÏµÊýµÄµÚ11Î»µ½µÚ4Î»£¬
-      // (3) BRR2´æ·ÅµÄÊÇ·ÖÆµÏµÊýµÄµÚ15Î»µ½µÚ12Î»£¬ºÍµÚ3Î»
-      // µ½µÚ0Î»
-      // ÀýÈç¶ÔÓÚ²¨ÌØÂÊÎ»9600Ê±£¬·ÖÆµÏµÊý=2000000/9600=208
-      // ¶ÔÓ¦µÄÊ®Áù½øÖÆÊýÎª00D0£¬BBR1=0D,BBR2=00
-
-      UART1_BRR2=0x00;
-      UART1_BRR1=0x0d;
-
-      UART1_CR2=0x2c;//ÔÊÐí½ÓÊÕ£¬·¢ËÍ£¬¿ª½ÓÊÕÖÐ¶Ï
+    UART1_CR1=0x00;
+    UART1_CR2=0x00;
+    UART1_CR3=0x00;
+    // è®¾ç½®æ³¢ç‰¹çŽ‡ï¼Œå¿…é¡»æ³¨æ„ä»¥ä¸‹å‡ ç‚¹ï¼š
+    // (1) å¿…é¡»å…ˆå†™BRR2
+    // (2) BRR1å­˜æ”¾çš„æ˜¯åˆ†é¢‘ç³»æ•°çš„ç¬¬11ä½åˆ°ç¬¬4ä½ï¼Œ
+    // (3) BRR2å­˜æ”¾çš„æ˜¯åˆ†é¢‘ç³»æ•°çš„ç¬¬15ä½åˆ°ç¬¬12ä½ï¼Œå’Œç¬¬3ä½
+    // åˆ°ç¬¬0ä½
+    // ä¾‹å¦‚å¯¹äºŽæ³¢ç‰¹çŽ‡ä½9600æ—¶ï¼Œåˆ†é¢‘ç³»æ•°=2000000/9600=208
+    // å¯¹åº”çš„åå…­è¿›åˆ¶æ•°ä¸º00D0ï¼ŒBBR1=0D,BBR2=00
+    UART1_BRR2=0x00;
+    UART1_BRR1=0x0d;
+    UART1_CR2=0x2c;//å…è®¸æŽ¥æ”¶ï¼Œå‘é€ï¼Œå¼€æŽ¥æ”¶ä¸­æ–­
 }
+
 void UART1_sendchar(unsigned char c)
 {
-      while((UART1_SR & 0x80)==0x00);
-      UART1_DR=c;
+    while((UART1_SR & 0x80)==0x00);
+    UART1_DR=c;
 }
 void UART1_sendhex(unsigned char dat)
 {
-		UART1_sendchar('0');
-		
-                UART1_sendchar('x');
-		
-                UART1_sendchar(HexTable[dat>>4]);
-		
-                UART1_sendchar(HexTable[dat&0x0f]);
-		
-                UART1_sendchar(' ');
+    UART1_sendchar('0');
+    UART1_sendchar('x');
+    UART1_sendchar(HexTable[dat>>4]);
+    UART1_sendchar(HexTable[dat&0x0f]);
+    UART1_sendchar(' ');
 }
 void UART1_sendstr(unsigned char *dat)
 {
-		while(*dat!='\0')
-		
-                {
-				
-                  UART1_sendchar(*dat);
-				
-                  dat++;
-				//delay2us();
-		
-                }
+    while(*dat!='\0')
+    {
+        UART1_sendchar(*dat);
+        dat++;
+        //delay2us();
+    }
 }
 
 main()
 {
-		int i=0;
-		Init_UART1();
-		Init_AD();
-		while (1)
-		{
-				ADC_CR1|=0x01;
-				for(i=0;i<100;i++); // ÑÓÊ±Ò»¶ÎÊ±¼ä£¬ÖÁÉÙ7uS£¬±£Ö¤ADC Ä£¿éÉÏµçÍõ³Ç
-				ADC_CR1|=0x01;      // ÔÙ´Î½«CR1¼Ä´æÆ÷µÄ×îµÍÎ»ÖÃ1,¿ªÆôAD×ª»»
-
-				while((ADC_CSR & 0x80)!=0x80); // µÈ´ý×ª»»½áÊø
-				//UART2_sendchar(ADC_DRH);
-				//UART2_sendchar(ADC_DRL);
-				UART1_sendhex(ADC_DRH);
-				UART1_sendhex(ADC_DRL);
-				UART1_sendstr("\r\n");
-				ADC_CSR&=(~0x80);
-		}
+    int i,j;
+    Init_UART1();
+    Init_AD();
+    // PD_DDR|=0x18;
+    // PD_CR1|=0x18;
+    // PD_ODR|=0x18;
+    while (1)
+    {
+        ADC_CR1|=0x01;
+        for(i=0;i<100;i++); // å»¶æ—¶ä¸€æ®µæ—¶é—´ï¼Œè‡³å°‘7uSï¼Œä¿è¯ADC æ¨¡å—ä¸Šç”µçŽ‹åŸŽ
+        ADC_CR1|=0x01;      // å†æ¬¡å°†CR1å¯„å­˜å™¨çš„æœ€ä½Žä½ç½®1,å¼€å¯ADè½¬æ¢
+        while((ADC_CSR & 0x80)!=0x80); // ç­‰å¾…è½¬æ¢ç»“æŸ
+        //UART2_sendchar(ADC_DRH);
+        //UART2_sendchar(ADC_DRL);
+        UART1_sendhex(ADC_DRH);
+        UART1_sendhex(ADC_DRL);
+        // UART1_sendstr("test");
+        UART1_sendstr("\r\n");
+        // ADC_CSR&=(~0x80);
+        // PD_ODR^=0x08;
+        // for(i=0;i<100;i++)
+        //     for(j=0;j<200;j++);
+        // for(i=0;i<100;i++)
+        //     for(j=0;j<200;j++);
+    }
 }
