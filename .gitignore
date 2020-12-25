@@ -3,8 +3,6 @@
 *.ewt
 *.ewd
 *.pyc
-.pio/
-.vscode/
 *.crf
 *.dep
 *.map
@@ -17,6 +15,7 @@
 *.sct
 *.elf
 *.ini
-iDesigner_Project/
+*.pio/
+*.vscode/
 settings/
 Debug/

@@ -14,17 +14,18 @@
 
 #### 关键特性
 
-* 小封装低成本
+* 小封装，应用广
 
 ### [收录资源](https://github.com/SoCXin/STM8S003)
 
 * [文档](docs/)
 * [资源](src/)
 * [工程](project/)
+
 ### [选型建议](https://github.com/SoCXin)
 
-[STM8S003](https://github.com/SoCXin/STM8S003)是ST单片机中综合成本最低的产品，最常用封装规格TSSOP20，适用于逻辑简单，对IIC/SPI/UART等常规通信接口有需求，但只有8K flash。
+[STM8S003](https://github.com/SoCXin/STM8S003) IIC/SPI/UART等常规通信接口皆有，但只有8K flash，适合小项目开发
 
-- 替换产品[N76E003](https://github.com/SoCXin/N76E003)
+* [N76E003](https://github.com/SoCXin/N76E003)
 
 ###  [www.SoC.xin(芯)](http://www.SoC.Xin)
