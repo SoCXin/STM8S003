@@ -20,6 +20,7 @@
 * [参考资源](src/)
 * [相关文档](docs/)
 * [典型应用](project/)
+* [官方库](https://www.st.com/en/embedded-software/stsw-stm8069.html)
 
 ### [选型建议](https://github.com/SoCXin)
 

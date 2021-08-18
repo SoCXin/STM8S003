@@ -42,7 +42,10 @@ Doxyfile
 *.odg
 *.csv
 *.xml
-# *.pdf
+*.pdf
+*.html
+*.chm
+_htmresc
 *.xlsx
 *.zip
 *.xcf
@@ -51,12 +54,6 @@ Doxyfile
 *.rst
 *.srec
 # *_sc*
-*cm23*
-*cm33*
-*cm7*
-*cm4*
-*cm3*
-*cm1*
 # *cm0*
 *.uvgu*
 *dox
