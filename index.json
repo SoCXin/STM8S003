@@ -1,0 +1,34 @@
+{
+    "type":"MCU",
+    "name":"STM8S003",
+    "title": "ST STM8S003 MCU",
+    "description":"ST 8bit MCU",
+    "Core": {
+        "num": 1,
+        "type":"STM8",
+        "Freq":16,
+        "DMIPS": 12,
+        "CoreMark": 15
+    },
+    "manufacturer": {
+        "vendor":"ST",
+        "homepage":"https://www.st.com/zh/microcontrollers-microprocessors/stm8s-value-line.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SoCXin/STM8S003.git"
+    },
+    "version":"1.0.0",
+    "series":["STM8S001","STM8S003","STM8S005","STM8S007"],
+    "package":["SO8N","TSSOP20","LQFP32"],
+    "peripheral": ["ADC","USART","SPI","IIC"],
+    "keywords": [
+        "dev-platform",
+        "STMicroelectronics",
+        "STM8S",
+        "STM8",
+        "8-bit",
+        "ADC","I2C","RTC","SPI",
+        "3.6V","1.8V"
+    ]
+}
